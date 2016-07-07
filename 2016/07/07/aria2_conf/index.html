@@ -57,15 +57,30 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="壹 颗">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Mac 用户肯定都受够了百度网盘在自己电脑上的糟糕体验，至少我是如此：安装官方的 App，经常下载时中断，有时甚至 Bug 般连续中断，无奈使用浏览器下载，速度却是令人挠头。花点时间来配置 aria2，结合 Chrome，一定让你舒心。
+
+aria2 是什么？aria2 是一款支持多种协议的轻量级命令行下载工具。有以下特性：
+
+多线程连线：aria2 会自动从多个线程下载文件，并充分利用你的带宽">
+<meta property="og:type" content="article">
+<meta property="og:title" content="aria2 相关配置教程">
+<meta property="og:url" content="http://yoursite.com/2016/07/07/aria2_conf/index.html">
 <meta property="og:site_name" content="壹 颗">
-<meta property="og:description">
+<meta property="og:description" content="Mac 用户肯定都受够了百度网盘在自己电脑上的糟糕体验，至少我是如此：安装官方的 App，经常下载时中断，有时甚至 Bug 般连续中断，无奈使用浏览器下载，速度却是令人挠头。花点时间来配置 aria2，结合 Chrome，一定让你舒心。
+
+aria2 是什么？aria2 是一款支持多种协议的轻量级命令行下载工具。有以下特性：
+
+多线程连线：aria2 会自动从多个线程下载文件，并充分利用你的带宽">
+<meta property="og:image" content="http://7xsmal.com1.z0.glb.clouddn.com/aria2_webui.png">
+<meta property="og:updated_time" content="2016-07-07T15:30:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="壹 颗">
-<meta name="twitter:description">
+<meta name="twitter:title" content="aria2 相关配置教程">
+<meta name="twitter:description" content="Mac 用户肯定都受够了百度网盘在自己电脑上的糟糕体验，至少我是如此：安装官方的 App，经常下载时中断，有时甚至 Bug 般连续中断，无奈使用浏览器下载，速度却是令人挠头。花点时间来配置 aria2，结合 Chrome，一定让你舒心。
+
+aria2 是什么？aria2 是一款支持多种协议的轻量级命令行下载工具。有以下特性：
+
+多线程连线：aria2 会自动从多个线程下载文件，并充分利用你的带宽">
+<meta name="twitter:image" content="http://7xsmal.com1.z0.glb.clouddn.com/aria2_webui.png">
 
 
 
@@ -83,7 +98,7 @@
   };
 </script>
 
-  <title> 壹 颗 </title>
+  <title> aria2 相关配置教程 | 壹 颗 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -104,9 +119,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -163,9 +176,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -185,10 +198,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/07/07/aria2_conf/" itemprop="url">
-                  aria2 相关配置教程
-                </a>
+                aria2 相关配置教程
               
             
           </h1>
@@ -227,9 +237,7 @@
       
 
       
-        
-          
-            <blockquote>
+        <blockquote>
 <p><strong><span style="color: rgb(68, 175, 235); font-size: 20px;">Mac 用户肯定都受够了百度网盘在自己电脑上的糟糕体验，至少我是如此：安装官方的 App，经常下载时中断，有时甚至 Bug 般连续中断，无奈使用浏览器下载，速度却是令人挠头。花点时间来配置 aria2，结合 Chrome，一定让你舒心。</span></strong></p>
 </blockquote>
 <h1 id="aria2-是什么？"><a href="#aria2-是什么？" class="headerlink" title="aria2 是什么？"></a>aria2 是什么？</h1><p>aria2 是一款支持多种协议的轻量级命令行下载工具。有以下特性：</p>
@@ -269,16 +277,18 @@
 <p>如果你想关掉后台的 aria2，可以到活动监视器中找到 aria2c 杀掉，也可以在终端输入 <code>kill aria2</code> 之后按 Tab 键，aria2 会自动变成进程号，回车即可杀掉它。</p>
 <p>~ End ~</p>
 
-          
-        
       
     </div>
     
     <div>
       
+        
+      
     </div>
 
     <div>
+      
+        
       
     </div>
 
@@ -286,118 +296,32 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/04/05/atom_babel/" rel="next" title="Atom开发ReactJS自动报错插件正确配置~">
+                <i class="fa fa-chevron-left"></i> Atom开发ReactJS自动报错插件正确配置~
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/04/05/atom_babel/" itemprop="url">
-                  Atom开发ReactJS自动报错插件正确配置~
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-05T22:05:02+08:00" content="2016-04-05">
-              2016-04-05
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h2 id="1-安装language-babel插件"><a href="#1-安装language-babel插件" class="headerlink" title="1.安装language-babel插件"></a>1.安装language-babel插件</h2><h2 id="2-Atom设置"><a href="#2-Atom设置" class="headerlink" title="2.Atom设置"></a>2.Atom设置</h2><p>在Atom的language-babel的Setting中将Allow Local Override打勾<br><img src="http://7xsmal.com1.z0.glb.clouddn.com/rxbabel1.jpg" alt=""></p>
-<h2 id="3-添加-languagebabel文件"><a href="#3-添加-languagebabel文件" class="headerlink" title="3.添加.languagebabel文件"></a>3.添加.languagebabel文件</h2><p>在你的项目根目录建立一个.languagebabel文件，配置类似如下实例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"babelMapsPath"</span>:                      <span class="string">"relPath"</span>,</span><br><span class="line">  <span class="string">"babelSourcePath"</span>:                    <span class="string">"relPath"</span>,</span><br><span class="line">  <span class="string">"babelTranspilePath"</span>:                 <span class="string">"relPath"</span>,</span><br><span class="line">  <span class="string">"babelMapsAddUrl"</span>:                    <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"createMap"</span>:                          <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"createTargetDirectories"</span>:            <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"createTranspiledCode"</span>:               <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"disableWhenNoBabelrcFileInPath"</span>:     <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"projectRoot"</span>:                        <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"suppressSourcePathMessages"</span>:         <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"suppressTranspileOnSaveMessages"</span>:    <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"transpileOnSave"</span>:                    <span class="literal">true</span>|<span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="4-添加-babelrc文件"><a href="#4-添加-babelrc文件" class="headerlink" title="4.添加.babelrc文件"></a>4.添加.babelrc文件</h2><p>在你的项目根目录建立一个.babelrc文件，配置类似如下实例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"presets"</span>: [<span class="string">"react"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="5-用atom编辑jsx"><a href="#5-用atom编辑jsx" class="headerlink" title="5.用atom编辑jsx"></a>5.用atom编辑jsx</h2><p>用atom编辑jsx文件时，要注意右下角下图所示这个地方，系统要以Babel ES6 JavaScript方式打开的才会使用到language-babel插件，如果不是，请点击更改。<br><img src="http://7xsmal.com1.z0.glb.clouddn.com/rxbabel2.jpg" alt=""></p>
-<h2 id="6-完成配置"><a href="#6-完成配置" class="headerlink" title="6.完成配置"></a>6.完成配置</h2><p>配置完毕后，你可以测试一下，写一个js或jsx文件，然后按保存，如果有问题的话，系统会在右上角弹出对话框，告诉你编译失败并且提示错误信息，光标也会定位到出错的位置。<br><img src="http://7xsmal.com1.z0.glb.clouddn.com/rxbabel_error.png" alt=""></p>
-<p>~ End ~</p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -405,6 +329,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -424,8 +352,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://7xsmal.com1.z0.glb.clouddn.com/rxavatar.png"
@@ -463,6 +400,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#aria2-是什么？"><span class="nav-number">1.</span> <span class="nav-text">aria2 是什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始吧"><span class="nav-number">2.</span> <span class="nav-text">开始吧</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-下载-aria2"><span class="nav-number">2.1.</span> <span class="nav-text">1. 下载 aria2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-如果是-El-Capitan-用户，你要做的"><span class="nav-number">2.2.</span> <span class="nav-text">2. 如果是 El Capitan 用户，你要做的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-安装-Homebrew"><span class="nav-number">2.3.</span> <span class="nav-text">3. 安装 Homebrew</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-安装-aria2"><span class="nav-number">2.4.</span> <span class="nav-text">4. 安装 aria2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-设置配置文件"><span class="nav-number">2.5.</span> <span class="nav-text">5. 设置配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-启动-RPC-模式"><span class="nav-number">2.6.</span> <span class="nav-text">6. 启动 RPC 模式</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -547,6 +495,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=0.5.0"></script>
+
+
 
   
 
