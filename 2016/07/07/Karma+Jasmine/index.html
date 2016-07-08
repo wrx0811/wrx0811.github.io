@@ -1,0 +1,587 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="1. Karma介绍Karma是Testacular的新名字，在2012年google开源了Testacular，2013年Testacular改名为Karma。Karma是一个让人感到非常神秘的名字，表示佛教中的缘分，因果报应，比Cassandra这种名字更让人猜不透！
+Karma是一个基于Node.js的JavaScript测试执行过程管理工具（Test Runner）。该工具可用于测试所有主">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Karma + Jasmine 自动化单元测试">
+<meta property="og:url" content="http://yoursite.com/2016/07/07/Karma+Jasmine/index.html">
+<meta property="og:site_name" content="壹 颗">
+<meta property="og:description" content="1. Karma介绍Karma是Testacular的新名字，在2012年google开源了Testacular，2013年Testacular改名为Karma。Karma是一个让人感到非常神秘的名字，表示佛教中的缘分，因果报应，比Cassandra这种名字更让人猜不透！
+Karma是一个基于Node.js的JavaScript测试执行过程管理工具（Test Runner）。该工具可用于测试所有主">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2013/08/karma1.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2013/08/karma2.png">
+<meta property="og:updated_time" content="2016-07-08T17:05:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Karma + Jasmine 自动化单元测试">
+<meta name="twitter:description" content="1. Karma介绍Karma是Testacular的新名字，在2012年google开源了Testacular，2013年Testacular改名为Karma。Karma是一个让人感到非常神秘的名字，表示佛教中的缘分，因果报应，比Cassandra这种名字更让人猜不透！
+Karma是一个基于Node.js的JavaScript测试执行过程管理工具（Test Runner）。该工具可用于测试所有主">
+<meta name="twitter:image" content="http://blog.fens.me/wp-content/uploads/2013/08/karma1.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Karma + Jasmine 自动化单元测试 | 壹 颗 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">壹 颗</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚🕛</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Karma + Jasmine 自动化单元测试
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-07T00:00:00+08:00" content="2016-07-07">
+              2016-07-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-Karma介绍"><a href="#1-Karma介绍" class="headerlink" title="1. Karma介绍"></a>1. Karma介绍</h2><p>Karma是Testacular的新名字，在2012年google开源了Testacular，2013年Testacular改名为Karma。Karma是一个让人感到非常神秘的名字，表示佛教中的缘分，因果报应，比Cassandra这种名字更让人猜不透！</p>
+<p>Karma是一个基于Node.js的JavaScript测试执行过程管理工具（Test Runner）。该工具可用于测试所有主流Web浏览器，也可集成到CI（Continuous integration）工具，也可和其他代码编辑器一起使用。这个测试工具的一个强大特性就是，它可以监控(Watch)文件的变化，然后自行执行，通过console.log显示测试结果。</p>
+<p>Jasmine是单元测试框架，本单将介绍用Karma让Jasmine测试自动化完成。Jasmine的介绍，请参考文章：<a href="http://blog.fens.me/nodejs-jasmine-bdd/" target="_blank" rel="external">jasmine行为驱动,测试先行</a></p>
+<h2 id="2-创建项目并安装Karma"><a href="#2-创建项目并安装Karma" class="headerlink" title="2. 创建项目并安装Karma"></a>2. 创建项目并安装Karma</h2><p>首先展示下Demo的目录结构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── js</span><br><span class="line">    └── src.js</span><br><span class="line">├── test</span><br><span class="line">    └── src-test.js</span><br><span class="line">├── node_modules</span><br><span class="line">    ├── karma</span><br><span class="line">    ├── karma-jasmine</span><br><span class="line">    ├── jasmine-core</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">├── karma.conf.js</span><br><span class="line">└── package.json</span><br></pre></td></tr></table></figure>
+<p>创建项目并安装Karma</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">~: mkdir karma</span><br><span class="line">~: cd karma</span><br><span class="line">~: npm init</span><br><span class="line">~: npm install karma --save-dev</span><br></pre></td></tr></table></figure>
+<h2 id="3-测试是否安装成功"><a href="#3-测试是否安装成功" class="headerlink" title="3. 测试是否安装成功"></a>3. 测试是否安装成功</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">~: karma start</span><br><span class="line"></span><br><span class="line">WARN [karma]: No captured browser, open http://localhost:9876/</span><br><span class="line">INFO [karma]: Karma v1.1.0 server started at http://localhost:9876/</span><br></pre></td></tr></table></figure>
+<p>从浏览器看到<code>karma</code>界面，可以看到已连接字样<span style="color:red">connected</span><br><img src="http://blog.fens.me/wp-content/uploads/2013/08/karma1.png" alt=""></p>
+<h2 id="4-Karma-Jasmine-配置"><a href="#4-Karma-Jasmine-配置" class="headerlink" title="4. Karma + Jasmine 配置"></a>4. Karma + Jasmine 配置</h2><p>初始化karma配置文件<code>karma.conf.js</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">~: karma init</span><br><span class="line"></span><br><span class="line">Wich testing framework do you want to use ?</span><br><span class="line">Press tab to list possible options. Enter to move to the next question.</span><br><span class="line">&gt; jasmine</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p><span style="color:red">一路回车后</span>，就会创建<code>karma.conf.js</code>文件，</p>
+<p>安装集成包<code>karma-jasmine</code>，如果有提示缺少这个依赖包<code>jasmine-core</code>，也需要装下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~: npm install karma-jasmine --save-dev</span><br><span class="line">~: npm install jasmine-core --save-dev</span><br></pre></td></tr></table></figure>
+<h2 id="5-自动化单元测试"><a href="#5-自动化单元测试" class="headerlink" title="5. 自动化单元测试"></a>5. 自动化单元测试</h2><ul>
+<li>3步准备工作：<ol>
+<li>创建源文件：用于实现某种业务逻辑的文件，就是我们平时写的js脚本</li>
+<li>创建测试文件：符合jasmineAPI的测试js脚本</li>
+<li>修改<code>karma.conf.js</code>配置</li>
+</ol>
+</li>
+</ul>
+<ol>
+<li><p>创建源文件：用于实现某种业务逻辑的文件，就是我们平时写的js脚本<br> 有一个需求，要实现单词倒写的功能。如：”ABCD” ==&gt; “DCBA”</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">~: vi src.js</span><br><span class="line"></span><br><span class="line">function reverse(name) &#123;</span><br><span class="line">    return name.split(&quot;&quot;).reverse().join(&quot;&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建测试文件：符合jasmineAPI的测试js脚本</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">describe(&quot;A suite of basic functions&quot;, function() &#123;</span><br><span class="line">   it(&quot;reverse word&quot;,function()&#123;</span><br><span class="line">       expect(&quot;DCBA&quot;).toEqual(reverse(&quot;ABCD&quot;));</span><br><span class="line">   &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改<code>karma.conf.js</code>配置文件，我们这里需要修改：files和exclude变量</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">module.exports = function(config) &#123;</span><br><span class="line">    config.set(&#123;</span><br><span class="line">        basePath: &apos;&apos;,</span><br><span class="line">        frameworks: [&apos;jasmine&apos;],</span><br><span class="line">        </span><br><span class="line">        // list of files / patterns to load in the browser</span><br><span class="line">        files: [</span><br><span class="line">            &apos;js/*.js&apos;,</span><br><span class="line">            &apos;test/*-test.js&apos;</span><br><span class="line">        ],</span><br><span class="line">        </span><br><span class="line">        // list of files to exclude</span><br><span class="line">        exclude: [&apos;karma.conf.js&apos;],</span><br><span class="line"></span><br><span class="line">        preprocessors: &#123;&#125;,</span><br><span class="line">        reporters: [&apos;progress&apos;],</span><br><span class="line">        port: 9876,</span><br><span class="line">        colors: true,</span><br><span class="line">        logLevel: config.LOG_INFO,</span><br><span class="line">        autoWatch: true,</span><br><span class="line">        browsers: [&apos;Chrome&apos;],</span><br><span class="line">        singleRun: false,</span><br><span class="line">        concurrency: Infinity</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 启动<span style="color: red">karma</span> 单元测试全自动执行</p>
+ <pre>
+ ~: karma start karma.conf.js
+
+ WARN [karma]: No captured browser, open http://localhost:9876/
+ INFO [karma]: Karma v1.1.0 server started at http://localhost:9876/
+ INFO [launcher]: Launching browser Chrome with unlimited concurrency
+ INFO [launcher]: Starting browser Chrome
+ INFO [Chrome 51.0.2704 (Mac OS X 10.11.5)]: Connected on socket /#ryK9l-yJI_SG4K_7AAAA with id 6128391
+ Chrome 51.0.2704 (Mac OS X 10.11.5): Executed 1 of 1 SUCCESS (0.005 secs / 0.004 secs)
+ </pre>   
+
+<p> 浏览器会自动打开<br> <img src="http://blog.fens.me/wp-content/uploads/2013/08/karma2.png" alt=""></p>
+<blockquote>
+<p><span style="color: red">注意：</span></p>
+</blockquote>
+<p> 关于运行<code>karma start karma.conf.js</code>报错问题：</p>
+ <pre>
+ WARN [karma]: No captured browser, open http://localhost:9876/
+ INFO [karma]: Karma v1.1.0 server started at http://localhost:9876/
+ INFO [launcher]: Launching browser Chrome with unlimited concurrency
+ ERROR [launcher]: Cannot load browser "Chrome": it is not registered! Perhaps you are missing some plugin?
+ ERROR [karma]: Found 1 load error
+ </pre>
+
+<p> 解决方法：安装Chrome加载插件</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~: npm install karma-chrome-launcher --save-dev</span><br></pre></td></tr></table></figure>
+<p> <br></p>
+<p> 接下来我们修改<code>src.js</code></p>
+ <pre>
+ describe("A suite of basic functions", function() {
+     it("reverse word",function(){
+         expect("DCBA").toEqual(reverse("ABCD"));
+         expect("Conan").toEqual(reverse("nano"));
+     });
+ });
+ </pre>
+
+<p> 由于<code>karma.conf.js</code>配置文件中<code>autoWatch: true</code>，所以<code>src.js</code>文件保存后，会自动执行单元测试。<br> 执行日志如下：提示我们单元测试出错了。</p>
+ <pre>
+ INFO [watcher]: Changed file "/Users/rxwang/Desktop/Html/Angular/karma/src.js".
+ Chrome 51.0.2704 (Mac OS X 10.11.5) A suite of basic functions reverse word FAILED
+    Expected 'Conan' to equal 'onan'.
+        at Object.<anonymous> (src.js:8:19)
+ Chrome 51.0.2704 (Mac OS X 10.11.5): Executed 1 of 1 (1 FAILED) ERROR (0.013 secs / 0.005 secs)
+ </anonymous></pre>
+
+</li>
+</ol>
+<p>~ End ~</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/07/aria2_conf/" rel="next" title="aria2 相关配置教程">
+                <i class="fa fa-chevron-left"></i> aria2 相关配置教程
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7xsmal.com1.z0.glb.clouddn.com/rxavatar.png"
+               alt="rongxin" />
+          <p class="site-author-name" itemprop="name">rongxin</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Karma介绍"><span class="nav-number">1.</span> <span class="nav-text">1. Karma介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-创建项目并安装Karma"><span class="nav-number">2.</span> <span class="nav-text">2. 创建项目并安装Karma</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-测试是否安装成功"><span class="nav-number">3.</span> <span class="nav-text">3. 测试是否安装成功</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Karma-Jasmine-配置"><span class="nav-number">4.</span> <span class="nav-text">4. Karma + Jasmine 配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-自动化单元测试"><span class="nav-number">5.</span> <span class="nav-text">5. 自动化单元测试</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rongxin</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=0.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
