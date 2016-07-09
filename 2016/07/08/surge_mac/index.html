@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="atom," />
+  <meta name="keywords" content="surge," />
 
 
 
@@ -57,26 +57,19 @@
 
 
 
-<meta name="description" content="1.安装language-babel插件2.Atom设置在Atom的language-babel的Setting中将Allow Local Override打勾
-3.添加.languagebabel文件在你的项目根目录建立一个.languagebabel文件，配置类似如下实例：
-1234567891011121314&amp;#123;  &quot;babelMapsPath&quot;:">
+<meta name="description" content="前言想必大家都听说过 iOS 端大名鼎鼎的 Surge ，一款基于 iOS 9 的新特性 Network Extension 开发的网络调试工具，能够免越狱使用 Shadowsocks 科学上网，带给 iOS 用户很大的便利。今天介绍的这款 Surge for Mac 是针对 Surge for iOS 用户的一项福利。如果你购买有 Surge for iOS ，恭喜你，你可以免费激活并使用 Ma">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Atom开发ReactJS自动报错插件正确配置~">
-<meta property="og:url" content="http://yoursite.com/2016/04/05/atom_babel/index.html">
+<meta property="og:title" content="Surge for Mac 配置指南">
+<meta property="og:url" content="http://yoursite.com/2016/07/08/surge_mac/index.html">
 <meta property="og:site_name" content="壹  颗">
-<meta property="og:description" content="1.安装language-babel插件2.Atom设置在Atom的language-babel的Setting中将Allow Local Override打勾
-3.添加.languagebabel文件在你的项目根目录建立一个.languagebabel文件，配置类似如下实例：
-1234567891011121314&amp;#123;  &quot;babelMapsPath&quot;:">
-<meta property="og:image" content="http://7xsmal.com1.z0.glb.clouddn.com/rxbabel1.jpg">
-<meta property="og:image" content="http://7xsmal.com1.z0.glb.clouddn.com/rxbabel2.jpg">
-<meta property="og:image" content="http://7xsmal.com1.z0.glb.clouddn.com/rxbabel_error.png">
-<meta property="og:updated_time" content="2016-07-09T01:55:02.000Z">
+<meta property="og:description" content="前言想必大家都听说过 iOS 端大名鼎鼎的 Surge ，一款基于 iOS 9 的新特性 Network Extension 开发的网络调试工具，能够免越狱使用 Shadowsocks 科学上网，带给 iOS 用户很大的便利。今天介绍的这款 Surge for Mac 是针对 Surge for iOS 用户的一项福利。如果你购买有 Surge for iOS ，恭喜你，你可以免费激活并使用 Ma">
+<meta property="og:image" content="http://7xsmal.com1.z0.glb.clouddn.com/surge_mac1.png">
+<meta property="og:image" content="http://7xsmal.com1.z0.glb.clouddn.com/surge_mac2.png">
+<meta property="og:updated_time" content="2016-07-09T02:31:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Atom开发ReactJS自动报错插件正确配置~">
-<meta name="twitter:description" content="1.安装language-babel插件2.Atom设置在Atom的language-babel的Setting中将Allow Local Override打勾
-3.添加.languagebabel文件在你的项目根目录建立一个.languagebabel文件，配置类似如下实例：
-1234567891011121314&amp;#123;  &quot;babelMapsPath&quot;:">
-<meta name="twitter:image" content="http://7xsmal.com1.z0.glb.clouddn.com/rxbabel1.jpg">
+<meta name="twitter:title" content="Surge for Mac 配置指南">
+<meta name="twitter:description" content="前言想必大家都听说过 iOS 端大名鼎鼎的 Surge ，一款基于 iOS 9 的新特性 Network Extension 开发的网络调试工具，能够免越狱使用 Shadowsocks 科学上网，带给 iOS 用户很大的便利。今天介绍的这款 Surge for Mac 是针对 Surge for iOS 用户的一项福利。如果你购买有 Surge for iOS ，恭喜你，你可以免费激活并使用 Ma">
+<meta name="twitter:image" content="http://7xsmal.com1.z0.glb.clouddn.com/surge_mac1.png">
 
 
 
@@ -94,7 +87,7 @@
   };
 </script>
 
-  <title> Atom开发ReactJS自动报错插件正确配置~ | 壹  颗 </title>
+  <title> Surge for Mac 配置指南 | 壹  颗 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -214,7 +207,7 @@
             
             
               
-                Atom开发ReactJS自动报错插件正确配置~
+                Surge for Mac 配置指南
               
             
           </h1>
@@ -226,8 +219,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-05T00:00:00+08:00" content="2016-04-05">
-              2016-04-05
+            <time itemprop="dateCreated" datetime="2016-07-08T00:00:00+08:00" content="2016-07-08">
+              2016-07-08
             </time>
           </span>
 
@@ -240,8 +233,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
+                  <a href="/categories/其他/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
                   </a>
                 </span>
 
@@ -272,18 +265,37 @@
       
 
       
-        <!--title：定义了博文的标题
-date：定义了创作此博文的时间
-tags：定义了博文的标签
-update：定义了最后修改的时间
-comments：定义能否评论此博文（true/false，默认为true）
-categories：定义了博文的种类-->
-<h2 id="1-安装language-babel插件"><a href="#1-安装language-babel插件" class="headerlink" title="1.安装language-babel插件"></a>1.安装language-babel插件</h2><h2 id="2-Atom设置"><a href="#2-Atom设置" class="headerlink" title="2.Atom设置"></a>2.Atom设置</h2><p>在Atom的language-babel的Setting中将Allow Local Override打勾<br><img src="http://7xsmal.com1.z0.glb.clouddn.com/rxbabel1.jpg" alt=""></p>
-<h2 id="3-添加-languagebabel文件"><a href="#3-添加-languagebabel文件" class="headerlink" title="3.添加.languagebabel文件"></a>3.添加.languagebabel文件</h2><p>在你的项目根目录建立一个.languagebabel文件，配置类似如下实例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"babelMapsPath"</span>:                      <span class="string">"relPath"</span>,</span><br><span class="line">  <span class="string">"babelSourcePath"</span>:                    <span class="string">"relPath"</span>,</span><br><span class="line">  <span class="string">"babelTranspilePath"</span>:                 <span class="string">"relPath"</span>,</span><br><span class="line">  <span class="string">"babelMapsAddUrl"</span>:                    <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"createMap"</span>:                          <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"createTargetDirectories"</span>:            <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"createTranspiledCode"</span>:               <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"disableWhenNoBabelrcFileInPath"</span>:     <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"projectRoot"</span>:                        <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"suppressSourcePathMessages"</span>:         <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"suppressTranspileOnSaveMessages"</span>:    <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"transpileOnSave"</span>:                    <span class="literal">true</span>|<span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="4-添加-babelrc文件"><a href="#4-添加-babelrc文件" class="headerlink" title="4.添加.babelrc文件"></a>4.添加.babelrc文件</h2><p>在你的项目根目录建立一个.babelrc文件，配置类似如下实例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"presets"</span>: [<span class="string">"react"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="5-用atom编辑jsx"><a href="#5-用atom编辑jsx" class="headerlink" title="5.用atom编辑jsx"></a>5.用atom编辑jsx</h2><p>用atom编辑jsx文件时，要注意右下角下图所示这个地方，系统要以Babel ES6 JavaScript方式打开的才会使用到language-babel插件，如果不是，请点击更改。<br><img src="http://7xsmal.com1.z0.glb.clouddn.com/rxbabel2.jpg" alt=""></p>
-<h2 id="6-完成配置"><a href="#6-完成配置" class="headerlink" title="6.完成配置"></a>6.完成配置</h2><p>配置完毕后，你可以测试一下，写一个js或jsx文件，然后按保存，如果有问题的话，系统会在右上角弹出对话框，告诉你编译失败并且提示错误信息，光标也会定位到出错的位置。<br><img src="http://7xsmal.com1.z0.glb.clouddn.com/rxbabel_error.png" alt=""></p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>想必大家都听说过 iOS 端大名鼎鼎的 <span style="color: red;">Surge</span> ，一款基于 iOS 9 的新特性 Network Extension 开发的网络调试工具，能够免越狱使用 Shadowsocks 科学上网，带给 iOS 用户很大的便利。<br>今天介绍的这款 Surge for Mac 是针对 Surge for iOS 用户的一项福利。如果你购买有 Surge for iOS ，恭喜你，你可以免费激活并使用 Mac 版，在 Mac 上体验 iOS 端科学上网的顺滑</p>
+<h2 id="配置前准备"><a href="#配置前准备" class="headerlink" title="配置前准备"></a>配置前准备</h2><p>升级到最新版本的 Surge for iOS （ &gt;= 1.1.3 ），在 more 标签栏下轻轻摇晃手机，就能召唤出 Surge Mac Beta 的配置方法。<br>同时开启 Mac 和 iOS 上的蓝牙。  </p>
+<h2 id="配备ing"><a href="#配备ing" class="headerlink" title="配备ing"></a>配备ing</h2><ul>
+<li><p>STEP 1<br>  下载并安装 <a href="http://surge.run/Surge-Mac.zip" target="_blank" rel="external">Surge Mac Beta</a></p>
+</li>
+<li><p>STEP 2<br>  命名配置文件为 .surge.conf 放在 个人（~/） 目录下</p>
+<ul>
+<li>具体步骤：<ul>
+<li>打开 Terminal （终端）</li>
+<li>在终端输入<br>  <code>cd ~/</code><br>  <code>vi .surge.conf</code></li>
+<li>输入 i ,将配置文件复制到终端中。<br>  配件文件例子：<a href="http://yalv.me/download/surge.conf" target="_blank" rel="external">mac for surge 配置</a></li>
+<li>在 Proxy 这行替换为你的SS账号（ip/端口／加密方式／密码）。</li>
+<li>编辑完成后，按 esc 键，输入 :wq</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>STEP 3<br>  下面来激活软件。打开 Mac 端的 Surge 软件，提示激活。点开 Surge for iOS more标签下 Surge Mac Beta 的激活按钮，激活完成。</p>
+</li>
+<li><p>STEP 4<br>  在系统偏好设置-网络中将 <code>Web代理(HTTP)</code> 和 <code>安全Web代理(HTTPS)</code> 勾上，并在<code>Web代理服务器</code>中写入 <span style="color: red;">127.0.0.1 : 6152</span>，如图：<br><img src="http://7xsmal.com1.z0.glb.clouddn.com/surge_mac1.png" alt=""></p>
+</li>
+</ul>
+<h2 id="配置后注意事项"><a href="#配置后注意事项" class="headerlink" title="配置后注意事项"></a><span style="color: rgb(230, 86, 86)">配置后注意事项</span></h2><p>Surge for Mac 与 ShadowsocksX 软件冲突，不可同时启动。若同时启动，Surge for Mac 在STEP 4 中的设置会被重置，这时候只需关闭 ShadowsocksX 再重复STEP 4 中的设置即可。按照步骤一步一步设置，应该能配置好 Surge for Mac 软件。</p>
+<h2 id="与1password有冲突，解决方法："><a href="#与1password有冲突，解决方法：" class="headerlink" title="与1password有冲突，解决方法："></a><span style="color: rgb(230, 86, 86)">与1password有冲突，解决方法：</span></h2><ul>
+<li>在系统偏好设置-网络中将<code>SOCKS代理</code>勾上，并在<code>SOCKS代理服务器</code>中写入<span style="color: red;">127.0.0.1 : 6153</span></li>
+<li><p>在<code>忽略这些主机与域的代理设置：</code>中写入</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1,0.0.0.0/8,10.0.0.0/8,192.168.0.0/16,172.16.0.0/12,localhost,*.local,*.4006024680.com</span><br></pre></td></tr></table></figure>
+<p>  即可。</p>
+<p>  如下图：<br>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/surge_mac2.png" alt=""></p>
+</li>
+</ul>
 <p>~ End ~</p>
 
       
@@ -305,7 +317,7 @@ categories：定义了博文的种类-->
       
         <div class="post-tags">
           
-            <a href="/tags/atom/" rel="tag">#atom</a>
+            <a href="/tags/surge/" rel="tag">#surge</a>
           
         </div>
       
@@ -314,13 +326,13 @@ categories：定义了博文的种类-->
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/07/07/Karma+Jasmine/" rel="next" title="Karma + Jasmine 自动化单元测试">
+                <i class="fa fa-chevron-left"></i> Karma + Jasmine 自动化单元测试
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/07/aria2_conf/" rel="prev" title="aria2 相关配置教程">
-                aria2 相关配置教程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -436,7 +448,7 @@ categories：定义了博文的种类-->
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装language-babel插件"><span class="nav-number">1.</span> <span class="nav-text">1.安装language-babel插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Atom设置"><span class="nav-number">2.</span> <span class="nav-text">2.Atom设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-添加-languagebabel文件"><span class="nav-number">3.</span> <span class="nav-text">3.添加.languagebabel文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-添加-babelrc文件"><span class="nav-number">4.</span> <span class="nav-text">4.添加.babelrc文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-用atom编辑jsx"><span class="nav-number">5.</span> <span class="nav-text">5.用atom编辑jsx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-完成配置"><span class="nav-number">6.</span> <span class="nav-text">6.完成配置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置前准备"><span class="nav-number">2.</span> <span class="nav-text">配置前准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配备ing"><span class="nav-number">3.</span> <span class="nav-text">配备ing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置后注意事项"><span class="nav-number">4.</span> <span class="nav-text">配置后注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#与1password有冲突，解决方法："><span class="nav-number">5.</span> <span class="nav-text">与1password有冲突，解决方法：</span></a></li></ol></div>
             
           </div>
         </section>
