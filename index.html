@@ -158,6 +158,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
@@ -184,6 +194,314 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/09/Chrome 控制台console的用法/" itemprop="url">
+                  Chrome 控制台console的用法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-09T00:00:00+08:00" content="2016-09-09">
+              2016-09-09
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="首先我们来看看console里面具体提供了哪些方法可以供我们平时调试时使用："><a href="#首先我们来看看console里面具体提供了哪些方法可以供我们平时调试时使用：" class="headerlink" title="首先我们来看看console里面具体提供了哪些方法可以供我们平时调试时使用："></a>首先我们来看看console里面具体提供了哪些方法可以供我们平时调试时使用：</h4><p><img src="http://7xsmal.com1.z0.glb.clouddn.com/201609092342.png" alt="201609092342-w512"></p>
+<p>目前控制台方法和属性有：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&quot;$$&quot;, &quot;$x&quot;, &quot;dir&quot;, &quot;dirxml&quot;, &quot;keys&quot;, &quot;values&quot;, &quot;profile&quot;, &quot;profileEnd&quot;, &quot;monitorEvents&quot;, &quot;unmonitorEvents&quot;, &quot;inspect&quot;, &quot;copy&quot;, &quot;clear&quot;, &quot;getEventListeners&quot;, &quot;undebug&quot;, &quot;monitor&quot;, &quot;unmonitor&quot;, &quot;table&quot;, &quot;$0&quot;, &quot;$1&quot;, &quot;$2&quot;, &quot;$3&quot;, &quot;$4&quot;, &quot;$_&quot;]</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="下面我们来一一介绍一下各个方法主要的用途："><a href="#下面我们来一一介绍一下各个方法主要的用途：" class="headerlink" title="下面我们来一一介绍一下各个方法主要的用途："></a>下面我们来一一介绍一下各个方法主要的用途：</h2><ul>
+<li><h3 id="console-log-用于输出普通信息"><a href="#console-log-用于输出普通信息" class="headerlink" title="console.log 用于输出普通信息"></a>console.log 用于输出普通信息</h3></li>
+<li><h3 id="console-info-用于输出提示性信息"><a href="#console-info-用于输出提示性信息" class="headerlink" title="console.info 用于输出提示性信息"></a>console.info 用于输出提示性信息</h3></li>
+<li><h3 id="console-error-用于输出错误信息"><a href="#console-error-用于输出错误信息" class="headerlink" title="console.error 用于输出错误信息"></a>console.error 用于输出错误信息</h3></li>
+<li><h3 id="console-warn-用于输出警示信息"><a href="#console-warn-用于输出警示信息" class="headerlink" title="console.warn 用于输出警示信息"></a>console.warn 用于输出警示信息</h3><p>  一般情况下我们用来输入信息的方法主要是用到上面四个，用图来说话：<br>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909112850.png" alt="20160909112850-w365"></p>
+</li>
+</ul>
+<ul>
+<li><h3 id="console-groupEnd-结束一组输出信息"><a href="#console-groupEnd-结束一组输出信息" class="headerlink" title="console.groupEnd 结束一组输出信息"></a>console.groupEnd 结束一组输出信息</h3><p>  看你需求选择不同的输出方法来使用，如果上述四个方法再配合group和groupEnd方法来一起使用就可以输入各种各样的不同形式的输出信息。<br><img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909113447.png" alt="20160909113447-w523"></p>
+</li>
+</ul>
+<ul>
+<li><h3 id="console-assert-对输入的表达式进行断言，只有表达式为false时，才输出相应的信息到控制台"><a href="#console-assert-对输入的表达式进行断言，只有表达式为false时，才输出相应的信息到控制台" class="headerlink" title="console.assert 对输入的表达式进行断言，只有表达式为false时，才输出相应的信息到控制台"></a>console.assert 对输入的表达式进行断言，只有表达式为false时，才输出相应的信息到控制台</h3><p>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909113643.png" alt="20160909113643-w618"></p>
+</li>
+</ul>
+<ul>
+<li><h3 id="console-count（这个方法非常实用哦）当你想统计代码被执行的次数"><a href="#console-count（这个方法非常实用哦）当你想统计代码被执行的次数" class="headerlink" title="console.count（这个方法非常实用哦）当你想统计代码被执行的次数"></a>console.count（这个方法非常实用哦）当你想统计代码被执行的次数</h3><p>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909113814.png" alt="20160909113814-w523"></p>
+</li>
+</ul>
+<ul>
+<li><h3 id="console-dir（这个方法是我经常使用的-可不知道比for-in方便了多少）直接将该DOM结点以DOM树的结构进行输出，可以详细查对象的方法发展等等"><a href="#console-dir（这个方法是我经常使用的-可不知道比for-in方便了多少）直接将该DOM结点以DOM树的结构进行输出，可以详细查对象的方法发展等等" class="headerlink" title="console.dir（这个方法是我经常使用的 可不知道比for in方便了多少）直接将该DOM结点以DOM树的结构进行输出，可以详细查对象的方法发展等等"></a>console.dir（这个方法是我经常使用的 可不知道比for in方便了多少）直接将该DOM结点以DOM树的结构进行输出，可以详细查对象的方法发展等等</h3><p>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909114255.png" alt="20160909114255-w546"></p>
+</li>
+</ul>
+<ul>
+<li><h3 id="console-time-计时开始、console-timeEnd-计时结束（看了下面的图你瞬间就感受到它的厉害了）"><a href="#console-time-计时开始、console-timeEnd-计时结束（看了下面的图你瞬间就感受到它的厉害了）" class="headerlink" title="console.time-计时开始、console.timeEnd-计时结束（看了下面的图你瞬间就感受到它的厉害了）"></a>console.time-计时开始、console.timeEnd-计时结束（看了下面的图你瞬间就感受到它的厉害了）</h3><p>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909114527.png" alt="20160909114527-w517"></p>
+</li>
+</ul>
+<ul>
+<li><h3 id="keys和values-前者返回传入对象所有属性名组成的数据，后者返回所有属性值组成的数组"><a href="#keys和values-前者返回传入对象所有属性名组成的数据，后者返回所有属性值组成的数组" class="headerlink" title="keys和values 前者返回传入对象所有属性名组成的数据，后者返回所有属性值组成的数组"></a>keys和values 前者返回传入对象所有属性名组成的数据，后者返回所有属性值组成的数组</h3><p>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909114700.png" alt="20160909114700"></p>
+</li>
+</ul>
+<ul>
+<li><h3 id="console-table方法"><a href="#console-table方法" class="headerlink" title="console.table方法"></a>console.table方法</h3><p>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909114830.png" alt="20160909114830-w907"></p>
+</li>
+</ul>
+<ul>
+<li><h3 id="Chrome-控制台中原生支持类jQuery的选择器，也就是说你可以用-加上熟悉的css选择器来选择DOM节"><a href="#Chrome-控制台中原生支持类jQuery的选择器，也就是说你可以用-加上熟悉的css选择器来选择DOM节" class="headerlink" title="Chrome 控制台中原生支持类jQuery的选择器，也就是说你可以用$加上熟悉的css选择器来选择DOM节"></a>Chrome 控制台中原生支持类jQuery的选择器，也就是说你可以用$加上熟悉的css选择器来选择DOM节</h3><p>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909115136.png" alt="20160909115136"></p>
+</li>
+</ul>
+<ul>
+<li><h3 id="console-profile和console-profileEnd配合一起使用来查看CPU使用相关信"><a href="#console-profile和console-profileEnd配合一起使用来查看CPU使用相关信" class="headerlink" title="console.profile和console.profileEnd配合一起使用来查看CPU使用相关信"></a>console.profile和console.profileEnd配合一起使用来查看CPU使用相关信</h3><p>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909115228.png" alt="20160909115228"></p>
+</li>
+</ul>
+<p>~End~</p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/02/Web存储机制/" itemprop="url">
+                  Web存储机制
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-02T00:00:00+08:00" content="2016-08-02">
+              2016-08-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Web Storagede 的两个主要目标是：</p>
+<ul>
+<li>提供一种在cookie之外的存储会话数据的途径</li>
+<li>提供一种存储大量可以跨会话存在的数据的机制</li>
+</ul>
+<h3 id="1-Storage类型"><a href="#1-Storage类型" class="headerlink" title="1. Storage类型"></a>1. Storage类型</h3><p>Storage类型提供最大的存储空间（因浏览器而异）来存储名值对。Storage的实例与其他对象类似，有如下方法：</p>
+<ul>
+<li><code>clear()</code> : 删除所有值</li>
+<li><code>getItem(name)</code> : 根据指定的名字name获取对应的值</li>
+<li><code>key(index)</code> : 获取index位置处的值得名字</li>
+<li><code>removeItem(name)</code> : 删除由name指定的名值对</li>
+<li><code>setItem(name,value)</code> : 为指定的name设置一个对应的值</li>
+</ul>
+<h3 id="2-sessionStorage对象"><a href="#2-sessionStorage对象" class="headerlink" title="2. sessionStorage对象"></a>2. sessionStorage对象</h3><p>sessionStorage对象存储特定于某个会话的数据，也就是该数据只保持到浏览器关闭。<br>这个对象就像会话cookie，也会在浏览器关闭后消失。<br>存储在sessionStorage中的数据可以跨越页面刷新而存在，并且如果浏览器支持，浏览器崩溃并重启之后依然可用（FF和Webkit都支持，IE不支持）。<br>由于sessionStorage对象其实是Storage的一个实例，所以可以使用setItem()或者直接设置新的属性来存储数据，方法如下：</p>
+<ul>
+<li><p>使用方法来存储数据<br><code>sessionStorage.setItem(&quot;name&quot;,&quot;Yao&quot;);</code></p>
+</li>
+<li><p>使用属性来存储数据<br><code>sesstionStorage.hello=&quot;world&quot;;</code></p>
+</li>
+</ul>
+<p>sessionStorage中有数据时，可以使用<code>getItem()</code>或者通过直接访问属性名来获取数据。<br>方法如下：</p>
+<ul>
+<li><p>使用方法来读取数据<br><code>var name = sesstionStorage.getItem(&quot;name&quot;);</code></p>
+</li>
+<li><p>使用属性来读取数据<br><code>var hello = sessionStorage.hello;</code></p>
+</li>
+</ul>
+<h3 id="3-localStorage对象"><a href="#3-localStorage对象" class="headerlink" title="3. localStorage对象"></a>3. localStorage对象</h3><p>localStorage对象作为持久保存客户端数据的方案取代了globalStorage。<br>要访问localStorage对象，页面必须来自同一个域名（子域名无效），使用同一种协议，在同一个端口。<br>由于localStorage是Storage的实例，所以可以像使用sessionStorage一样来使用它：</p>
+<ul>
+<li><p>使用方法来存储数据<br><code>localStorage.setItem(&quot;name&quot;,&quot;Yao&quot;);</code></p>
+</li>
+<li><p>使用属性来存储数据<br><code>localStorage.hello=&quot;world&quot;;</code></p>
+</li>
+<li><p>使用方法来读取数据<br><code>var name = localStorage.getItem(&quot;name&quot;);</code></p>
+</li>
+<li><p>使用属性来读取数据<br><code>var hello = localStorage.hello;</code></p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -541,6 +859,153 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/10/iOS中常见的一些宏/" itemprop="url">
+                  iOS中常见的一些宏
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-10T00:00:00+08:00" content="2016-05-10">
+              2016-05-10
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1-处理NSLog事件（开发者模式打印-发布者模式不打印）"><a href="#1-处理NSLog事件（开发者模式打印-发布者模式不打印）" class="headerlink" title="1.处理NSLog事件（开发者模式打印,发布者模式不打印）"></a>1.处理NSLog事件（开发者模式打印,发布者模式不打印）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#ifdef DEBUG</span><br><span class="line">#define NSLog(FORMAT, ...) fprintf(stderr,&quot;%s:%d\t%s\n&quot;,[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);</span><br><span class="line">#else</span><br><span class="line">#define NSLog(FORMAT, ...) nil</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
+<h3 id="2-在OC语言的情况下导入某些头文件"><a href="#2-在OC语言的情况下导入某些头文件" class="headerlink" title="2.在OC语言的情况下导入某些头文件"></a>2.在OC语言的情况下导入某些头文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#ifdef __OBJC__</span><br><span class="line">  //导入头文件</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
+<h3 id="3-处理循环引用问题（处理当前类对象）"><a href="#3-处理循环引用问题（处理当前类对象）" class="headerlink" title="3.处理循环引用问题（处理当前类对象）"></a>3.处理循环引用问题（处理当前类对象）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define WS(weakSelf)  __weak __typeof(&amp;*self)weakSelf = self;</span><br></pre></td></tr></table></figure>
+<h3 id="4-获取屏幕宽高"><a href="#4-获取屏幕宽高" class="headerlink" title="4.获取屏幕宽高"></a>4.获取屏幕宽高</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#define ScreenWidth [[UIScreen mainScreen] bounds].size.width</span><br><span class="line">#define ScreenHeight [[UIScreen mainScreen] bounds].size.heigh</span><br></pre></td></tr></table></figure>
+<h3 id="5-判断iOS8或更高系统版本"><a href="#5-判断iOS8或更高系统版本" class="headerlink" title="5.判断iOS8或更高系统版本"></a>5.判断iOS8或更高系统版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define IOS8UP ([[UIDevice currentDevice].systemVersion floatValue] &gt;= 8)</span><br></pre></td></tr></table></figure>
+<p><strong>谨慎使用，floatValue是不靠谱的，具体原因：</strong></p>
+<p>如果代码中有 if( version &gt;= 8.2) 的判断，则该判断会失效！<br><img src="http://7xsmal.com1.z0.glb.clouddn.com/2255666-2b3a9b92e4953bcc.png" alt="2255666-2b3a9b92e4953bc"></p>
+<p>这时如果使用字符串对比版本号，则不会出问题<br><img src="http://7xsmal.com1.z0.glb.clouddn.com/201609094341.png" alt="201609094341-w550"></p>
+<p>但是如果你对版本判断要求不是很严格的话，如果只是判断是否是iOS8/7的话,这个方法还是很好用的</p>
+<p>所以，还是使用字符串对比版本号比较靠谱。</p>
+<h3 id="6-设置颜色RGB值"><a href="#6-设置颜色RGB值" class="headerlink" title="6.设置颜色RGB值"></a>6.设置颜色RGB值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define RGB(a,b,c) [UIColor colorWithRed:(a/255.0) green:(b/255.0) blue:(c/255.0) alpha:1.0]</span><br></pre></td></tr></table></figure>
+<h3 id="7-设置颜色RGB值-透明度"><a href="#7-设置颜色RGB值-透明度" class="headerlink" title="7.设置颜色RGB值+透明度"></a>7.设置颜色RGB值+透明度</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define RGBA(a,b,c,d) [UIColor colorWithRed:(a/255.0) green:(b/255.0) blue:(c/255.0) alpha:d]</span><br></pre></td></tr></table></figure>
+<h3 id="8-支持横屏"><a href="#8-支持横屏" class="headerlink" title="8.支持横屏"></a>8.支持横屏</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#if __IPHONE_OS_VERSION_MAX_ALLOWED &gt;= 80000 // 当前Xcode支持iOS8及以上</span><br><span class="line">#define SCREEN_WIDTH ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?[UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale:[UIScreen mainScreen].bounds.size.width)</span><br><span class="line">#define SCREENH_HEIGHT ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale:[UIScreen mainScreen].bounds.size.height)</span><br><span class="line">#define SCREEN_SIZE ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?CGSizeMake([UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale,[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale):[UIScreen mainScreen].bounds.size)</span><br><span class="line">#else</span><br><span class="line">#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width</span><br><span class="line">#define SCREENH_HEIGHT [UIScreen mainScreen].bounds.size.height</span><br><span class="line">#define SCREEN_SIZE [UIScreen mainScreen].bounds.size</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
+<h3 id="9-设置随机颜色"><a href="#9-设置随机颜色" class="headerlink" title="9.设置随机颜色"></a>9.设置随机颜色</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define LRRandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]</span><br></pre></td></tr></table></figure>
+<h3 id="10-设置view的圆角边框"><a href="#10-设置view的圆角边框" class="headerlink" title="10.设置view的圆角边框"></a>10.设置view的圆角边框</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#define LRViewBorderRadius(View, Radius, Width, Color)\\</span><br><span class="line">[View.layer setCornerRadius:(Radius)];\</span><br><span class="line">[View.layer setMasksToBounds:YES];\</span><br><span class="line">[View.layer setBorderWidth:(Width)];\</span><br><span class="line">[View.layer setBorderColor:[Color CGColor]]</span><br></pre></td></tr></table></figure>
+<h3 id="11-获取图片资源"><a href="#11-获取图片资源" class="headerlink" title="11.获取图片资源"></a>11.获取图片资源</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define kGetImage(imageName) [UIImage imageNamed:[NSString stringWithFormat:@&quot;%@&quot;,imageName]]</span><br></pre></td></tr></table></figure>
+<h3 id="12-获取当前语言"><a href="#12-获取当前语言" class="headerlink" title="12.获取当前语言"></a>12.获取当前语言</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define LRCurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])</span><br></pre></td></tr></table></figure>
+<h3 id="13-判断当前的iPhone设备-系统版本"><a href="#13-判断当前的iPhone设备-系统版本" class="headerlink" title="13.判断当前的iPhone设备/系统版本"></a>13.判断当前的iPhone设备/系统版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//判断是否为iPhone</span><br><span class="line">#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)</span><br><span class="line">//判断是否为iPad</span><br><span class="line">#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)</span><br><span class="line">//判断是否为ipod</span><br><span class="line">#define IS_IPOD ([[[UIDevice currentDevice] model] isEqualToString:@&quot;iPod touch&quot;])</span><br><span class="line">// 判断是否为 iPhone 5SE</span><br><span class="line">#define iPhone5SE [[UIScreen mainScreen] bounds].size.width == 320.0f &amp;&amp; [[UIScreen mainScreen] bounds].size.height == 568.0f</span><br><span class="line">// 判断是否为iPhone 6/6s</span><br><span class="line">#define iPhone6_6s [[UIScreen mainScreen] bounds].size.width == 375.0f &amp;&amp; [[UIScreen mainScreen] bounds].size.height == 667.0f</span><br><span class="line">// 判断是否为iPhone 6Plus/6sPlus</span><br><span class="line">#define iPhone6Plus_6sPlus [[UIScreen mainScreen] bounds].size.width == 414.0f &amp;&amp; [[UIScreen mainScreen] bounds].size.height == 736.0f</span><br><span class="line">//获取系统版本</span><br><span class="line">#define IOS_SYSTEM_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]</span><br></pre></td></tr></table></figure>
+<h3 id="14-判断是真机还是模拟器"><a href="#14-判断是真机还是模拟器" class="headerlink" title="14.判断是真机还是模拟器"></a>14.判断是真机还是模拟器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#if TARGET_OS_IPHONE//iPhone Device#endif#if TARGET_IPHONE_SIMULATOR//iPhone Simulator#endif</span><br></pre></td></tr></table></figure>
+<h3 id="15-沙盒目录文件"><a href="#15-沙盒目录文件" class="headerlink" title="15.沙盒目录文件"></a>15.沙盒目录文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//获取temp</span><br><span class="line">#define kPathTemp NSTemporaryDirectory()</span><br><span class="line">//获取沙盒 Document</span><br><span class="line">#define kPathDocument [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]</span><br><span class="line">//获取沙盒 Cache</span><br><span class="line">#define kPathCache [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]</span><br></pre></td></tr></table></figure>
+<h3 id="16-宏与const-的使用"><a href="#16-宏与const-的使用" class="headerlink" title="16.宏与const 的使用"></a>16.宏与const 的使用</h3><p>很多小伙伴在定义一个常量字符串，都会定义成一个宏，最典型的例子就是服务器的地址。在此所有用宏定义常量字符的小伙伴以后就用const来定义吧！为什么呢 ？我们看看：</p>
+<p>宏的用法：一般字符串抽成宏，代码抽成宏使用。<br>const用法：一般常用的字符串定义成const（对于常量字符串苹果推荐我们使用const）。<br>宏与const区别：</p>
+<ol>
+<li><p>编译时刻不同，宏属于预编译 ，const属于编译时刻</p>
+</li>
+<li><p>宏能定义代码，const不能，多个宏对于编译会相对时间较长，影响开发效率，调试过慢，const只会编译一次，缩短编译时间。</p>
+</li>
+<li><p>宏不会检查错误，const会检查错误</p>
+</li>
+</ol>
+<p>通过以上对比，我们以后在开发中如果定义一个常量字符串就用const，定义代码就用宏。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">static NSString * const loginAccount = @&quot;loginAccount&quot;;static NSString * const loginPassword = @&quot;loginPassword&quot;;</span><br></pre></td></tr></table></figure>
+<h3 id="17-单例化一个类"><a href="#17-单例化一个类" class="headerlink" title="17.单例化一个类"></a>17.单例化一个类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">//</span><br><span class="line">//  SynthesizeSingleton.h</span><br><span class="line">//  CES</span><br><span class="line"> </span><br><span class="line">#ifndef SynthesizeSingleton_h</span><br><span class="line">#define SynthesizeSingleton_h</span><br><span class="line"> </span><br><span class="line"> //声明</span><br><span class="line">#define DECLARE_SYNTHESIZE_SINGLETON_FOR_CLASS(classname) </span><br><span class="line"> </span><br><span class="line">+ (classname *)sharedInstance; </span><br><span class="line"> </span><br><span class="line">//实现</span><br><span class="line">#define IMPLEMENT_SYNTHESIZE_SINGLETON_FOR_CLASS(classname) </span><br><span class="line"> </span><br><span class="line">static classname *shared##classname = nil; </span><br><span class="line"> </span><br><span class="line">+ (classname *)sharedInstance &#123; </span><br><span class="line">    @synchronized(self) &#123; </span><br><span class="line">        if (shared##classname == nil) &#123; </span><br><span class="line">            shared##classname = [[self alloc] init]; </span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">    </span><br><span class="line">    return shared##classname; </span><br><span class="line">&#125; </span><br><span class="line">  </span><br><span class="line">+ (id)allocWithZone:(NSZone *)zone &#123; </span><br><span class="line">    @synchronized(self) &#123; </span><br><span class="line">        if (shared##classname == nil) &#123; </span><br><span class="line">            shared##classname = [super allocWithZone:zone]; </span><br><span class="line">            return shared##classname; </span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">  </span><br><span class="line">    return nil; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (id)copyWithZone:(NSZone *)zone &#123; </span><br><span class="line">    return self;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用方法:在你需要创建单例类的类的.h和.m文件中分别加入以下代码（首先导入以上代码所处的头文件）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DECLARE_SYNTHESIZE_SINGLETON_FOR_CLASS(LoginManager)(.h)声明 IMPLEMENT_SYNTHESIZE_SINGLETON_FOR_CLASS(LoginManager)(.m)实现&lt;!----&gt;</span><br></pre></td></tr></table></figure>
+<p>~End~</p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/07/aria2_conf/" itemprop="url">
                   aria2 相关配置教程
                 </a>
@@ -840,8 +1305,8 @@ categories：定义了博文的种类-->
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/">
-              <span class="site-state-item-count">4</span>
+            <a href="/archives">
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -849,7 +1314,7 @@ categories：定义了博文的种类-->
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -858,7 +1323,7 @@ categories：定义了博文的种类-->
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
