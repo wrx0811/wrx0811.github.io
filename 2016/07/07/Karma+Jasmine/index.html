@@ -67,7 +67,7 @@ Karma是一个基于Node.js的JavaScript测试执行过程管理工具（Test Ru
 Karma是一个基于Node.js的JavaScript测试执行过程管理工具（Test Runner）。该工具可用于测试所有主">
 <meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2013/08/karma1.png">
 <meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2013/08/karma2.png">
-<meta property="og:updated_time" content="2016-07-09T01:55:36.000Z">
+<meta property="og:updated_time" content="2016-09-09T16:05:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Karma + Jasmine 自动化单元测试">
 <meta name="twitter:description" content="1. Karma介绍Karma是Testacular的新名字，在2012年google开源了Testacular，2013年Testacular改名为Karma。Karma是一个让人感到非常神秘的名字，表示佛教中的缘分，因果报应，比Cassandra这种名字更让人猜不透！
@@ -280,7 +280,7 @@ Karma是一个基于Node.js的JavaScript测试执行过程管理工具（Test Ru
       
         <h2 id="1-Karma介绍"><a href="#1-Karma介绍" class="headerlink" title="1. Karma介绍"></a>1. Karma介绍</h2><p>Karma是Testacular的新名字，在2012年google开源了Testacular，2013年Testacular改名为Karma。Karma是一个让人感到非常神秘的名字，表示佛教中的缘分，因果报应，比Cassandra这种名字更让人猜不透！</p>
 <p>Karma是一个基于Node.js的JavaScript测试执行过程管理工具（Test Runner）。该工具可用于测试所有主流Web浏览器，也可集成到CI（Continuous integration）工具，也可和其他代码编辑器一起使用。这个测试工具的一个强大特性就是，它可以监控(Watch)文件的变化，然后自行执行，通过console.log显示测试结果。</p>
-<p>Jasmine是单元测试框架，本单将介绍用Karma让Jasmine测试自动化完成。Jasmine的介绍，请参考文章：<a href="http://blog.fens.me/nodejs-jasmine-bdd/" target="_blank" rel="external">jasmine行为驱动,测试先行</a></p>
+<p>Jasmine是单元测试框架，本单将介绍用Karma让Jasmine测试自动化完成。Jasmine的介绍，请参考文章：<br><a href="http://blog.fens.me/nodejs-jasmine-bdd/" target="_blank" rel="external">jasmine行为驱动,测试先行</a></p>
 <h2 id="2-创建项目并安装Karma"><a href="#2-创建项目并安装Karma" class="headerlink" title="2. 创建项目并安装Karma"></a>2. 创建项目并安装Karma</h2><p>首先展示下Demo的目录结构</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── js</span><br><span class="line">    └── src.js</span><br><span class="line">├── test</span><br><span class="line">    └── src-test.js</span><br><span class="line">├── node_modules</span><br><span class="line">    ├── karma</span><br><span class="line">    ├── karma-jasmine</span><br><span class="line">    ├── jasmine-core</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">├── karma.conf.js</span><br><span class="line">└── package.json</span><br></pre></td></tr></table></figure>
 <p>创建项目并安装Karma</p>
