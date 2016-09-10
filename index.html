@@ -336,56 +336,16 @@
       
         
           
-            <h4 id="首先我们来看看console里面具体提供了哪些方法可以供我们平时调试时使用："><a href="#首先我们来看看console里面具体提供了哪些方法可以供我们平时调试时使用：" class="headerlink" title="首先我们来看看console里面具体提供了哪些方法可以供我们平时调试时使用："></a>首先我们来看看console里面具体提供了哪些方法可以供我们平时调试时使用：</h4><p><img src="http://7xsmal.com1.z0.glb.clouddn.com/201609092342.png" alt="201609092342-w512"></p>
-<p>目前控制台方法和属性有：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&quot;$$&quot;, &quot;$x&quot;, &quot;dir&quot;, &quot;dirxml&quot;, &quot;keys&quot;, &quot;values&quot;, &quot;profile&quot;, &quot;profileEnd&quot;, &quot;monitorEvents&quot;, &quot;unmonitorEvents&quot;, &quot;inspect&quot;, &quot;copy&quot;, &quot;clear&quot;, &quot;getEventListeners&quot;, &quot;undebug&quot;, &quot;monitor&quot;, &quot;unmonitor&quot;, &quot;table&quot;, &quot;$0&quot;, &quot;$1&quot;, &quot;$2&quot;, &quot;$3&quot;, &quot;$4&quot;, &quot;$_&quot;]</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h2 id="下面我们来一一介绍一下各个方法主要的用途："><a href="#下面我们来一一介绍一下各个方法主要的用途：" class="headerlink" title="下面我们来一一介绍一下各个方法主要的用途："></a>下面我们来一一介绍一下各个方法主要的用途：</h2><ul>
-<li><h3 id="console-log-用于输出普通信息"><a href="#console-log-用于输出普通信息" class="headerlink" title="console.log 用于输出普通信息"></a>console.log 用于输出普通信息</h3></li>
-<li><h3 id="console-info-用于输出提示性信息"><a href="#console-info-用于输出提示性信息" class="headerlink" title="console.info 用于输出提示性信息"></a>console.info 用于输出提示性信息</h3></li>
-<li><h3 id="console-error-用于输出错误信息"><a href="#console-error-用于输出错误信息" class="headerlink" title="console.error 用于输出错误信息"></a>console.error 用于输出错误信息</h3></li>
-<li><h3 id="console-warn-用于输出警示信息"><a href="#console-warn-用于输出警示信息" class="headerlink" title="console.warn 用于输出警示信息"></a>console.warn 用于输出警示信息</h3><p>  一般情况下我们用来输入信息的方法主要是用到上面四个，用图来说话：<br>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909112850.png" alt="20160909112850-w365"></p>
-</li>
-</ul>
-<ul>
-<li><h3 id="console-groupEnd-结束一组输出信息"><a href="#console-groupEnd-结束一组输出信息" class="headerlink" title="console.groupEnd 结束一组输出信息"></a>console.groupEnd 结束一组输出信息</h3><p>  看你需求选择不同的输出方法来使用，如果上述四个方法再配合group和groupEnd方法来一起使用就可以输入各种各样的不同形式的输出信息。<br><img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909113447.png" alt="20160909113447-w523"></p>
-</li>
-</ul>
-<ul>
-<li><h3 id="console-assert-对输入的表达式进行断言，只有表达式为false时，才输出相应的信息到控制台"><a href="#console-assert-对输入的表达式进行断言，只有表达式为false时，才输出相应的信息到控制台" class="headerlink" title="console.assert 对输入的表达式进行断言，只有表达式为false时，才输出相应的信息到控制台"></a>console.assert 对输入的表达式进行断言，只有表达式为false时，才输出相应的信息到控制台</h3><p>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909113643.png" alt="20160909113643-w618"></p>
-</li>
-</ul>
-<ul>
-<li><h3 id="console-count（这个方法非常实用哦）当你想统计代码被执行的次数"><a href="#console-count（这个方法非常实用哦）当你想统计代码被执行的次数" class="headerlink" title="console.count（这个方法非常实用哦）当你想统计代码被执行的次数"></a>console.count（这个方法非常实用哦）当你想统计代码被执行的次数</h3><p>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909113814.png" alt="20160909113814-w523"></p>
-</li>
-</ul>
-<ul>
-<li><h3 id="console-dir（这个方法是我经常使用的-可不知道比for-in方便了多少）直接将该DOM结点以DOM树的结构进行输出，可以详细查对象的方法发展等等"><a href="#console-dir（这个方法是我经常使用的-可不知道比for-in方便了多少）直接将该DOM结点以DOM树的结构进行输出，可以详细查对象的方法发展等等" class="headerlink" title="console.dir（这个方法是我经常使用的 可不知道比for in方便了多少）直接将该DOM结点以DOM树的结构进行输出，可以详细查对象的方法发展等等"></a>console.dir（这个方法是我经常使用的 可不知道比for in方便了多少）直接将该DOM结点以DOM树的结构进行输出，可以详细查对象的方法发展等等</h3><p>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909114255.png" alt="20160909114255-w546"></p>
-</li>
-</ul>
-<ul>
-<li><h3 id="console-time-计时开始、console-timeEnd-计时结束（看了下面的图你瞬间就感受到它的厉害了）"><a href="#console-time-计时开始、console-timeEnd-计时结束（看了下面的图你瞬间就感受到它的厉害了）" class="headerlink" title="console.time-计时开始、console.timeEnd-计时结束（看了下面的图你瞬间就感受到它的厉害了）"></a>console.time-计时开始、console.timeEnd-计时结束（看了下面的图你瞬间就感受到它的厉害了）</h3><p>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909114527.png" alt="20160909114527-w517"></p>
-</li>
-</ul>
-<ul>
-<li><h3 id="keys和values-前者返回传入对象所有属性名组成的数据，后者返回所有属性值组成的数组"><a href="#keys和values-前者返回传入对象所有属性名组成的数据，后者返回所有属性值组成的数组" class="headerlink" title="keys和values 前者返回传入对象所有属性名组成的数据，后者返回所有属性值组成的数组"></a>keys和values 前者返回传入对象所有属性名组成的数据，后者返回所有属性值组成的数组</h3><p>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909114700.png" alt="20160909114700"></p>
-</li>
-</ul>
-<ul>
-<li><h3 id="console-table方法"><a href="#console-table方法" class="headerlink" title="console.table方法"></a>console.table方法</h3><p>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909114830.png" alt="20160909114830-w907"></p>
-</li>
-</ul>
-<ul>
-<li><h3 id="Chrome-控制台中原生支持类jQuery的选择器，也就是说你可以用-加上熟悉的css选择器来选择DOM节"><a href="#Chrome-控制台中原生支持类jQuery的选择器，也就是说你可以用-加上熟悉的css选择器来选择DOM节" class="headerlink" title="Chrome 控制台中原生支持类jQuery的选择器，也就是说你可以用$加上熟悉的css选择器来选择DOM节"></a>Chrome 控制台中原生支持类jQuery的选择器，也就是说你可以用$加上熟悉的css选择器来选择DOM节</h3><p>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909115136.png" alt="20160909115136"></p>
-</li>
-</ul>
-<ul>
-<li><h3 id="console-profile和console-profileEnd配合一起使用来查看CPU使用相关信"><a href="#console-profile和console-profileEnd配合一起使用来查看CPU使用相关信" class="headerlink" title="console.profile和console.profileEnd配合一起使用来查看CPU使用相关信"></a>console.profile和console.profileEnd配合一起使用来查看CPU使用相关信</h3><p>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/20160909115228.png" alt="20160909115228"></p>
-</li>
-</ul>
-<p>~End~</p>
+          首先我们来看看console里面具体提供了哪些方法可以供我们平时调试时使用：
+目前控制台方法和属性有：
+1[&quot;$$&quot;, &quot;$x&quot;, &quot;dir&quot;, &quot;dirxml&quot;, &quot;keys&quot;, &quot;values&quot;, &quot;profile&quot;, &quot;profileEnd&q
+          ...
 
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/09/Chrome 控制台console的用法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -503,47 +463,23 @@
       
         
           
-            <p>Web Storagede 的两个主要目标是：</p>
-<ul>
-<li>提供一种在cookie之外的存储会话数据的途径</li>
-<li>提供一种存储大量可以跨会话存在的数据的机制</li>
-</ul>
-<h3 id="1-Storage类型"><a href="#1-Storage类型" class="headerlink" title="1. Storage类型"></a>1. Storage类型</h3><p>Storage类型提供最大的存储空间（因浏览器而异）来存储名值对。Storage的实例与其他对象类似，有如下方法：</p>
-<ul>
-<li><code>clear()</code> : 删除所有值</li>
-<li><code>getItem(name)</code> : 根据指定的名字name获取对应的值</li>
-<li><code>key(index)</code> : 获取index位置处的值得名字</li>
-<li><code>removeItem(name)</code> : 删除由name指定的名值对</li>
-<li><code>setItem(name,value)</code> : 为指定的name设置一个对应的值</li>
-</ul>
-<h3 id="2-sessionStorage对象"><a href="#2-sessionStorage对象" class="headerlink" title="2. sessionStorage对象"></a>2. sessionStorage对象</h3><p>sessionStorage对象存储特定于某个会话的数据，也就是该数据只保持到浏览器关闭。<br>这个对象就像会话cookie，也会在浏览器关闭后消失。<br>存储在sessionStorage中的数据可以跨越页面刷新而存在，并且如果浏览器支持，浏览器崩溃并重启之后依然可用（FF和Webkit都支持，IE不支持）。<br>由于sessionStorage对象其实是Storage的一个实例，所以可以使用setItem()或者直接设置新的属性来存储数据，方法如下：</p>
-<ul>
-<li><p>使用方法来存储数据<br><code>sessionStorage.setItem(&quot;name&quot;,&quot;Yao&quot;);</code></p>
-</li>
-<li><p>使用属性来存储数据<br><code>sesstionStorage.hello=&quot;world&quot;;</code></p>
-</li>
-</ul>
-<p>sessionStorage中有数据时，可以使用<code>getItem()</code>或者通过直接访问属性名来获取数据。<br>方法如下：</p>
-<ul>
-<li><p>使用方法来读取数据<br><code>var name = sesstionStorage.getItem(&quot;name&quot;);</code></p>
-</li>
-<li><p>使用属性来读取数据<br><code>var hello = sessionStorage.hello;</code></p>
-</li>
-</ul>
-<h3 id="3-localStorage对象"><a href="#3-localStorage对象" class="headerlink" title="3. localStorage对象"></a>3. localStorage对象</h3><p>localStorage对象作为持久保存客户端数据的方案取代了globalStorage。<br>要访问localStorage对象，页面必须来自同一个域名（子域名无效），使用同一种协议，在同一个端口。<br>由于localStorage是Storage的实例，所以可以像使用sessionStorage一样来使用它：</p>
-<ul>
-<li><p>使用方法来存储数据<br><code>localStorage.setItem(&quot;name&quot;,&quot;Yao&quot;);</code></p>
-</li>
-<li><p>使用属性来存储数据<br><code>localStorage.hello=&quot;world&quot;;</code></p>
-</li>
-<li><p>使用方法来读取数据<br><code>var name = localStorage.getItem(&quot;name&quot;);</code></p>
-</li>
-<li><p>使用属性来读取数据<br><code>var hello = localStorage.hello;</code></p>
-</li>
-</ul>
-<p>~End~</p>
+          Web Storagede 的两个主要目标是：
 
-          
+提供一种在cookie之外的存储会话数据的途径
+提供一种存储大量可以跨会话存在的数据的机制
+
+1. Storage类型Storage类型提供最大的存储空间（因浏览器而异）来存储名值对。Storage的实例与其他对象类似，有如下方法：
+
+clear() : 删除所有值
+getItem(name) : 根据指定的名字name获取对应的值
+key(ind
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/02/Web存储机制/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -661,89 +597,15 @@
       
         
           
-            <h2 id="1-Karma介绍"><a href="#1-Karma介绍" class="headerlink" title="1. Karma介绍"></a>1. Karma介绍</h2><p>Karma是Testacular的新名字，在2012年google开源了Testacular，2013年Testacular改名为Karma。Karma是一个让人感到非常神秘的名字，表示佛教中的缘分，因果报应，比Cassandra这种名字更让人猜不透！</p>
-<p>Karma是一个基于Node.js的JavaScript测试执行过程管理工具（Test Runner）。该工具可用于测试所有主流Web浏览器，也可集成到CI（Continuous integration）工具，也可和其他代码编辑器一起使用。这个测试工具的一个强大特性就是，它可以监控(Watch)文件的变化，然后自行执行，通过console.log显示测试结果。</p>
-<p>Jasmine是单元测试框架，本单将介绍用Karma让Jasmine测试自动化完成。Jasmine的介绍，请参考文章：<br><a href="http://blog.fens.me/nodejs-jasmine-bdd/" target="_blank" rel="external">jasmine行为驱动,测试先行</a></p>
-<h2 id="2-创建项目并安装Karma"><a href="#2-创建项目并安装Karma" class="headerlink" title="2. 创建项目并安装Karma"></a>2. 创建项目并安装Karma</h2><p>首先展示下Demo的目录结构</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── js</span><br><span class="line">    └── src.js</span><br><span class="line">├── test</span><br><span class="line">    └── src-test.js</span><br><span class="line">├── node_modules</span><br><span class="line">    ├── karma</span><br><span class="line">    ├── karma-jasmine</span><br><span class="line">    ├── jasmine-core</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">├── karma.conf.js</span><br><span class="line">└── package.json</span><br></pre></td></tr></table></figure>
-<p>创建项目并安装Karma</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">~: mkdir karma</span><br><span class="line">~: cd karma</span><br><span class="line">~: npm init</span><br><span class="line">~: npm install karma --save-dev</span><br></pre></td></tr></table></figure>
-<h2 id="3-测试是否安装成功"><a href="#3-测试是否安装成功" class="headerlink" title="3. 测试是否安装成功"></a>3. 测试是否安装成功</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">~: karma start</span><br><span class="line"></span><br><span class="line">WARN [karma]: No captured browser, open http://localhost:9876/</span><br><span class="line">INFO [karma]: Karma v1.1.0 server started at http://localhost:9876/</span><br></pre></td></tr></table></figure>
-<p>从浏览器看到<code>karma</code>界面，可以看到已连接字样<span style="color:red">connected</span><br><img src="http://blog.fens.me/wp-content/uploads/2013/08/karma1.png" alt=""></p>
-<h2 id="4-Karma-Jasmine-配置"><a href="#4-Karma-Jasmine-配置" class="headerlink" title="4. Karma + Jasmine 配置"></a>4. Karma + Jasmine 配置</h2><p>初始化karma配置文件<code>karma.conf.js</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">~: karma init</span><br><span class="line"></span><br><span class="line">Wich testing framework do you want to use ?</span><br><span class="line">Press tab to list possible options. Enter to move to the next question.</span><br><span class="line">&gt; jasmine</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-<p><span style="color:red">一路回车后</span>，就会创建<code>karma.conf.js</code>文件，</p>
-<p>安装集成包<code>karma-jasmine</code>，如果有提示缺少这个依赖包<code>jasmine-core</code>，也需要装下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~: npm install karma-jasmine --save-dev</span><br><span class="line">~: npm install jasmine-core --save-dev</span><br></pre></td></tr></table></figure>
-<h2 id="5-自动化单元测试"><a href="#5-自动化单元测试" class="headerlink" title="5. 自动化单元测试"></a>5. 自动化单元测试</h2><ul>
-<li>3步准备工作：<ol>
-<li>创建源文件：用于实现某种业务逻辑的文件，就是我们平时写的js脚本</li>
-<li>创建测试文件：符合jasmineAPI的测试js脚本</li>
-<li>修改<code>karma.conf.js</code>配置</li>
-</ol>
-</li>
-</ul>
-<ol>
-<li><p>创建源文件：用于实现某种业务逻辑的文件，就是我们平时写的js脚本<br> 有一个需求，要实现单词倒写的功能。如：”ABCD” ==&gt; “DCBA”</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">~: vi src.js</span><br><span class="line"></span><br><span class="line">function reverse(name) &#123;</span><br><span class="line">    return name.split(&quot;&quot;).reverse().join(&quot;&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建测试文件：符合jasmineAPI的测试js脚本</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">describe(&quot;A suite of basic functions&quot;, function() &#123;</span><br><span class="line">   it(&quot;reverse word&quot;,function()&#123;</span><br><span class="line">       expect(&quot;DCBA&quot;).toEqual(reverse(&quot;ABCD&quot;));</span><br><span class="line">   &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改<code>karma.conf.js</code>配置文件，我们这里需要修改：files和exclude变量</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">module.exports = function(config) &#123;</span><br><span class="line">    config.set(&#123;</span><br><span class="line">        basePath: &apos;&apos;,</span><br><span class="line">        frameworks: [&apos;jasmine&apos;],</span><br><span class="line">        </span><br><span class="line">        // list of files / patterns to load in the browser</span><br><span class="line">        files: [</span><br><span class="line">            &apos;js/*.js&apos;,</span><br><span class="line">            &apos;test/*-test.js&apos;</span><br><span class="line">        ],</span><br><span class="line">        </span><br><span class="line">        // list of files to exclude</span><br><span class="line">        exclude: [&apos;karma.conf.js&apos;],</span><br><span class="line"></span><br><span class="line">        preprocessors: &#123;&#125;,</span><br><span class="line">        reporters: [&apos;progress&apos;],</span><br><span class="line">        port: 9876,</span><br><span class="line">        colors: true,</span><br><span class="line">        logLevel: config.LOG_INFO,</span><br><span class="line">        autoWatch: true,</span><br><span class="line">        browsers: [&apos;Chrome&apos;],</span><br><span class="line">        singleRun: false,</span><br><span class="line">        concurrency: Infinity</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> 启动<span style="color: red">karma</span> 单元测试全自动执行</p>
- <pre>
- ~: karma start karma.conf.js
+          1. Karma介绍Karma是Testacular的新名字，在2012年google开源了Testacular，2013年Testacular改名为Karma。Karma是一个让人感到非常神秘的名字，表示佛教中的缘分，因果报应，比Cassandra这种名字更让人猜不透！
+Karma是一个基于Node.js的JavaScript测试执行过程管理工具（Test Runner）。该工具可用于测试所有主
+          ...
 
- WARN [karma]: No captured browser, open http://localhost:9876/
- INFO [karma]: Karma v1.1.0 server started at http://localhost:9876/
- INFO [launcher]: Launching browser Chrome with unlimited concurrency
- INFO [launcher]: Starting browser Chrome
- INFO [Chrome 51.0.2704 (Mac OS X 10.11.5)]: Connected on socket /#ryK9l-yJI_SG4K_7AAAA with id 6128391
- Chrome 51.0.2704 (Mac OS X 10.11.5): Executed 1 of 1 SUCCESS (0.005 secs / 0.004 secs)
- </pre>   
-
-<p> 浏览器会自动打开<br> <img src="http://blog.fens.me/wp-content/uploads/2013/08/karma2.png" alt=""></p>
-<blockquote>
-<p><span style="color: red">注意：</span></p>
-</blockquote>
-<p> 关于运行<code>karma start karma.conf.js</code>报错问题：</p>
- <pre>
- WARN [karma]: No captured browser, open http://localhost:9876/
- INFO [karma]: Karma v1.1.0 server started at http://localhost:9876/
- INFO [launcher]: Launching browser Chrome with unlimited concurrency
- ERROR [launcher]: Cannot load browser "Chrome": it is not registered! Perhaps you are missing some plugin?
- ERROR [karma]: Found 1 load error
- </pre>
-
-<p> 解决方法：安装Chrome加载插件</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~: npm install karma-chrome-launcher --save-dev</span><br></pre></td></tr></table></figure>
-<p> <br></p>
-<p> 接下来我们修改<code>src.js</code></p>
- <pre>
- describe("A suite of basic functions", function() {
-     it("reverse word",function(){
-         expect("DCBA").toEqual(reverse("ABCD"));
-         expect("Conan").toEqual(reverse("nano"));
-     });
- });
- </pre>
-
-<p> 由于<code>karma.conf.js</code>配置文件中<code>autoWatch: true</code>，所以<code>src.js</code>文件保存后，会自动执行单元测试。<br> 执行日志如下：提示我们单元测试出错了。</p>
- <pre>
- INFO [watcher]: Changed file "/Users/rxwang/Desktop/Html/Angular/karma/src.js".
- Chrome 51.0.2704 (Mac OS X 10.11.5) A suite of basic functions reverse word FAILED
-    Expected 'Conan' to equal 'onan'.
-        at Object.<anonymous> (src.js:8:19)
- Chrome 51.0.2704 (Mac OS X 10.11.5): Executed 1 of 1 (1 FAILED) ERROR (0.013 secs / 0.005 secs)
- </anonymous></pre>
-
-</li>
-</ol>
-<p>~ End ~</p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/07/Karma+Jasmine/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -861,40 +723,14 @@
       
         
           
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>想必大家都听说过 iOS 端大名鼎鼎的 <span style="color: red;">Surge</span> ，一款基于 iOS 9 的新特性 Network Extension 开发的网络调试工具，能够免越狱使用 Shadowsocks 科学上网，带给 iOS 用户很大的便利。<br>今天介绍的这款 Surge for Mac 是针对 Surge for iOS 用户的一项福利。如果你购买有 Surge for iOS ，恭喜你，你可以免费激活并使用 Mac 版，在 Mac 上体验 iOS 端科学上网的顺滑</p>
-<h2 id="配置前准备"><a href="#配置前准备" class="headerlink" title="配置前准备"></a>配置前准备</h2><p>升级到最新版本的 Surge for iOS （ &gt;= 1.1.3 ），在 more 标签栏下轻轻摇晃手机，就能召唤出 Surge Mac Beta 的配置方法。<br>同时开启 Mac 和 iOS 上的蓝牙。  </p>
-<h2 id="配备ing"><a href="#配备ing" class="headerlink" title="配备ing"></a>配备ing</h2><ul>
-<li><p>STEP 1<br>  下载并安装 <a href="http://surge.run/Surge-Mac.zip" target="_blank" rel="external">Surge Mac Beta</a></p>
-</li>
-<li><p>STEP 2<br>  命名配置文件为 .surge.conf 放在 个人（~/） 目录下</p>
-<ul>
-<li>具体步骤：<ul>
-<li>打开 Terminal （终端）</li>
-<li>在终端输入<br>  <code>cd ~/</code><br>  <code>vi .surge.conf</code></li>
-<li>输入 i ,将配置文件复制到终端中。<br>  配件文件例子：<a href="http://yalv.me/download/surge.conf" target="_blank" rel="external">mac for surge 配置</a></li>
-<li>在 Proxy 这行替换为你的SS账号（ip/端口／加密方式／密码）。</li>
-<li>编辑完成后，按 esc 键，输入 :wq</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>STEP 3<br>  下面来激活软件。打开 Mac 端的 Surge 软件，提示激活。点开 Surge for iOS more标签下 Surge Mac Beta 的激活按钮，激活完成。</p>
-</li>
-<li><p>STEP 4<br>  在系统偏好设置-网络中将 <code>Web代理(HTTP)</code> 和 <code>安全Web代理(HTTPS)</code> 勾上，并在<code>Web代理服务器</code>中写入 <span style="color: red;">127.0.0.1 : 6152</span>，如图：<br><img src="http://7xsmal.com1.z0.glb.clouddn.com/surge_mac1.png" alt=""></p>
-</li>
-</ul>
-<h2 id="配置后注意事项"><a href="#配置后注意事项" class="headerlink" title="配置后注意事项"></a><span style="color: rgb(230, 86, 86)">配置后注意事项</span></h2><p>Surge for Mac 与 ShadowsocksX 软件冲突，不可同时启动。若同时启动，Surge for Mac 在STEP 4 中的设置会被重置，这时候只需关闭 ShadowsocksX 再重复STEP 4 中的设置即可。按照步骤一步一步设置，应该能配置好 Surge for Mac 软件。</p>
-<h2 id="与1password有冲突，解决方法："><a href="#与1password有冲突，解决方法：" class="headerlink" title="与1password有冲突，解决方法："></a><span style="color: rgb(230, 86, 86)">与1password有冲突，解决方法：</span></h2><ul>
-<li>在系统偏好设置-网络中将<code>SOCKS代理</code>勾上，并在<code>SOCKS代理服务器</code>中写入<span style="color: red;">127.0.0.1 : 6153</span></li>
-<li><p>在<code>忽略这些主机与域的代理设置：</code>中写入</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1,0.0.0.0/8,10.0.0.0/8,192.168.0.0/16,172.16.0.0/12,localhost,*.local,*.4006024680.com</span><br></pre></td></tr></table></figure>
-<p>  即可。</p>
-<p>  如下图：<br>  <img src="http://7xsmal.com1.z0.glb.clouddn.com/surge_mac2.png" alt=""></p>
-</li>
-</ul>
-<p>~ End ~</p>
+          前言想必大家都听说过 iOS 端大名鼎鼎的 Surge ，一款基于 iOS 9 的新特性 Network Extension 开发的网络调试工具，能够免越狱使用 Shadowsocks 科学上网，带给 iOS 用户很大的便利。今天介绍的这款 Surge for Mac 是针对 Surge for iOS 用户的一项福利。如果你购买有 Surge for iOS ，恭喜你，你可以免费激活并使用 Ma
+          ...
 
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/08/surge_mac/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1012,44 +848,14 @@
       
         
           
-            <h3 id="1-处理NSLog事件（开发者模式打印-发布者模式不打印）"><a href="#1-处理NSLog事件（开发者模式打印-发布者模式不打印）" class="headerlink" title="1. 处理NSLog事件（开发者模式打印,发布者模式不打印）"></a>1. 处理NSLog事件（开发者模式打印,发布者模式不打印）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#ifdef DEBUG</span><br><span class="line">#define NSLog(FORMAT, ...) fprintf(stderr,&quot;%s:%d\t%s\n&quot;,[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);</span><br><span class="line">#else</span><br><span class="line">#define NSLog(FORMAT, ...) nil</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
-<h3 id="2-在OC语言的情况下导入某些头文件"><a href="#2-在OC语言的情况下导入某些头文件" class="headerlink" title="2. 在OC语言的情况下导入某些头文件"></a>2. 在OC语言的情况下导入某些头文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#ifdef __OBJC__</span><br><span class="line">  //导入头文件</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
-<h3 id="3-处理循环引用问题（处理当前类对象）"><a href="#3-处理循环引用问题（处理当前类对象）" class="headerlink" title="3. 处理循环引用问题（处理当前类对象）"></a>3. 处理循环引用问题（处理当前类对象）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define WS(weakSelf)  __weak __typeof(&amp;*self)weakSelf = self;</span><br></pre></td></tr></table></figure>
-<h3 id="4-获取屏幕宽高"><a href="#4-获取屏幕宽高" class="headerlink" title="4. 获取屏幕宽高"></a>4. 获取屏幕宽高</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#define ScreenWidth [[UIScreen mainScreen] bounds].size.width</span><br><span class="line">#define ScreenHeight [[UIScreen mainScreen] bounds].size.heigh</span><br></pre></td></tr></table></figure>
-<h3 id="5-判断iOS8或更高系统版本"><a href="#5-判断iOS8或更高系统版本" class="headerlink" title="5. 判断iOS8或更高系统版本"></a>5. 判断iOS8或更高系统版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define IOS8UP ([[UIDevice currentDevice].systemVersion floatValue] &gt;= 8)</span><br></pre></td></tr></table></figure>
-<p><strong>谨慎使用，floatValue是不靠谱的，具体原因：</strong></p>
-<p>如果代码中有 if( version &gt;= 8.2) 的判断，则该判断会失效！<br><img src="http://7xsmal.com1.z0.glb.clouddn.com/2255666-2b3a9b92e4953bcc.png" alt="2255666-2b3a9b92e4953bc"></p>
-<p>这时如果使用字符串对比版本号，则不会出问题<br><img src="http://7xsmal.com1.z0.glb.clouddn.com/201609094341.png" alt="201609094341-w550"></p>
-<p>但是如果你对版本判断要求不是很严格的话，如果只是判断是否是iOS8/7的话,这个方法还是很好用的</p>
-<p>所以，还是使用字符串对比版本号比较靠谱。</p>
-<h3 id="6-设置颜色RGB值"><a href="#6-设置颜色RGB值" class="headerlink" title="6. 设置颜色RGB值"></a>6. 设置颜色RGB值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define RGB(a,b,c) [UIColor colorWithRed:(a/255.0) green:(b/255.0) blue:(c/255.0) alpha:1.0]</span><br></pre></td></tr></table></figure>
-<h3 id="7-设置颜色RGB值-透明度"><a href="#7-设置颜色RGB值-透明度" class="headerlink" title="7. 设置颜色RGB值+透明度"></a>7. 设置颜色RGB值+透明度</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define RGBA(a,b,c,d) [UIColor colorWithRed:(a/255.0) green:(b/255.0) blue:(c/255.0) alpha:d]</span><br></pre></td></tr></table></figure>
-<h3 id="8-支持横屏"><a href="#8-支持横屏" class="headerlink" title="8. 支持横屏"></a>8. 支持横屏</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#if __IPHONE_OS_VERSION_MAX_ALLOWED &gt;= 80000 // 当前Xcode支持iOS8及以上</span><br><span class="line">#define SCREEN_WIDTH ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?[UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale:[UIScreen mainScreen].bounds.size.width)</span><br><span class="line">#define SCREENH_HEIGHT ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale:[UIScreen mainScreen].bounds.size.height)</span><br><span class="line">#define SCREEN_SIZE ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)]?CGSizeMake([UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale,[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale):[UIScreen mainScreen].bounds.size)</span><br><span class="line">#else</span><br><span class="line">#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width</span><br><span class="line">#define SCREENH_HEIGHT [UIScreen mainScreen].bounds.size.height</span><br><span class="line">#define SCREEN_SIZE [UIScreen mainScreen].bounds.size</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
-<h3 id="9-设置随机颜色"><a href="#9-设置随机颜色" class="headerlink" title="9. 设置随机颜色"></a>9. 设置随机颜色</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define LRRandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]</span><br></pre></td></tr></table></figure>
-<h3 id="10-设置view的圆角边框"><a href="#10-设置view的圆角边框" class="headerlink" title="10. 设置view的圆角边框"></a>10. 设置view的圆角边框</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#define LRViewBorderRadius(View, Radius, Width, Color)\\</span><br><span class="line">[View.layer setCornerRadius:(Radius)];\</span><br><span class="line">[View.layer setMasksToBounds:YES];\</span><br><span class="line">[View.layer setBorderWidth:(Width)];\</span><br><span class="line">[View.layer setBorderColor:[Color CGColor]]</span><br></pre></td></tr></table></figure>
-<h3 id="11-获取图片资源"><a href="#11-获取图片资源" class="headerlink" title="11. 获取图片资源"></a>11. 获取图片资源</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define kGetImage(imageName) [UIImage imageNamed:[NSString stringWithFormat:@&quot;%@&quot;,imageName]]</span><br></pre></td></tr></table></figure>
-<h3 id="12-获取当前语言"><a href="#12-获取当前语言" class="headerlink" title="12. 获取当前语言"></a>12. 获取当前语言</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define LRCurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])</span><br></pre></td></tr></table></figure>
-<h3 id="13-判断当前的iPhone设备-系统版本"><a href="#13-判断当前的iPhone设备-系统版本" class="headerlink" title="13. 判断当前的iPhone设备/系统版本"></a>13. 判断当前的iPhone设备/系统版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//判断是否为iPhone</span><br><span class="line">#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)</span><br><span class="line">//判断是否为iPad</span><br><span class="line">#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)</span><br><span class="line">//判断是否为ipod</span><br><span class="line">#define IS_IPOD ([[[UIDevice currentDevice] model] isEqualToString:@&quot;iPod touch&quot;])</span><br><span class="line">// 判断是否为 iPhone 5SE</span><br><span class="line">#define iPhone5SE [[UIScreen mainScreen] bounds].size.width == 320.0f &amp;&amp; [[UIScreen mainScreen] bounds].size.height == 568.0f</span><br><span class="line">// 判断是否为iPhone 6/6s</span><br><span class="line">#define iPhone6_6s [[UIScreen mainScreen] bounds].size.width == 375.0f &amp;&amp; [[UIScreen mainScreen] bounds].size.height == 667.0f</span><br><span class="line">// 判断是否为iPhone 6Plus/6sPlus</span><br><span class="line">#define iPhone6Plus_6sPlus [[UIScreen mainScreen] bounds].size.width == 414.0f &amp;&amp; [[UIScreen mainScreen] bounds].size.height == 736.0f</span><br><span class="line">//获取系统版本</span><br><span class="line">#define IOS_SYSTEM_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]</span><br></pre></td></tr></table></figure>
-<h3 id="14-判断是真机还是模拟器"><a href="#14-判断是真机还是模拟器" class="headerlink" title="14. 判断是真机还是模拟器"></a>14. 判断是真机还是模拟器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#if TARGET_OS_IPHONE//iPhone Device#endif#if TARGET_IPHONE_SIMULATOR//iPhone Simulator#endif</span><br></pre></td></tr></table></figure>
-<h3 id="15-沙盒目录文件"><a href="#15-沙盒目录文件" class="headerlink" title="15. 沙盒目录文件"></a>15. 沙盒目录文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//获取temp</span><br><span class="line">#define kPathTemp NSTemporaryDirectory()</span><br><span class="line">//获取沙盒 Document</span><br><span class="line">#define kPathDocument [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]</span><br><span class="line">//获取沙盒 Cache</span><br><span class="line">#define kPathCache [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]</span><br></pre></td></tr></table></figure>
-<h3 id="16-宏与const-的使用"><a href="#16-宏与const-的使用" class="headerlink" title="16. 宏与const 的使用"></a>16. 宏与const 的使用</h3><p>很多小伙伴在定义一个常量字符串，都会定义成一个宏，最典型的例子就是服务器的地址。在此所有用宏定义常量字符的小伙伴以后就用const来定义吧！为什么呢 ？我们看看：</p>
-<p>宏的用法：一般字符串抽成宏，代码抽成宏使用。<br>const用法：一般常用的字符串定义成const（对于常量字符串苹果推荐我们使用const）。<br>宏与const区别：</p>
-<ol>
-<li><p>编译时刻不同，宏属于预编译 ，const属于编译时刻</p>
-</li>
-<li><p>宏能定义代码，const不能，多个宏对于编译会相对时间较长，影响开发效率，调试过慢，const只会编译一次，缩短编译时间。</p>
-</li>
-<li><p>宏不会检查错误，const会检查错误</p>
-</li>
-</ol>
-<p>通过以上对比，我们以后在开发中如果定义一个常量字符串就用const，定义代码就用宏。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">static NSString * const loginAccount = @&quot;loginAccount&quot;;static NSString * const loginPassword = @&quot;loginPassword&quot;;</span><br></pre></td></tr></table></figure>
-<h3 id="17-单例化一个类"><a href="#17-单例化一个类" class="headerlink" title="17. 单例化一个类"></a>17. 单例化一个类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">//</span><br><span class="line">//  SynthesizeSingleton.h</span><br><span class="line">//  CES</span><br><span class="line"> </span><br><span class="line">#ifndef SynthesizeSingleton_h</span><br><span class="line">#define SynthesizeSingleton_h</span><br><span class="line"> </span><br><span class="line"> //声明</span><br><span class="line">#define DECLARE_SYNTHESIZE_SINGLETON_FOR_CLASS(classname) </span><br><span class="line"> </span><br><span class="line">+ (classname *)sharedInstance; </span><br><span class="line"> </span><br><span class="line">//实现</span><br><span class="line">#define IMPLEMENT_SYNTHESIZE_SINGLETON_FOR_CLASS(classname) </span><br><span class="line"> </span><br><span class="line">static classname *shared##classname = nil; </span><br><span class="line"> </span><br><span class="line">+ (classname *)sharedInstance &#123; </span><br><span class="line">    @synchronized(self) &#123; </span><br><span class="line">        if (shared##classname == nil) &#123; </span><br><span class="line">            shared##classname = [[self alloc] init]; </span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">    </span><br><span class="line">    return shared##classname; </span><br><span class="line">&#125; </span><br><span class="line">  </span><br><span class="line">+ (id)allocWithZone:(NSZone *)zone &#123; </span><br><span class="line">    @synchronized(self) &#123; </span><br><span class="line">        if (shared##classname == nil) &#123; </span><br><span class="line">            shared##classname = [super allocWithZone:zone]; </span><br><span class="line">            return shared##classname; </span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">  </span><br><span class="line">    return nil; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (id)copyWithZone:(NSZone *)zone &#123; </span><br><span class="line">    return self;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>使用方法:在你需要创建单例类的类的.h和.m文件中分别加入以下代码（首先导入以上代码所处的头文件）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DECLARE_SYNTHESIZE_SINGLETON_FOR_CLASS(LoginManager)(.h)声明 IMPLEMENT_SYNTHESIZE_SINGLETON_FOR_CLASS(LoginManager)(.m)实现&lt;!----&gt;</span><br></pre></td></tr></table></figure>
-<p>~End~</p>
+          1. 处理NSLog事件（开发者模式打印,发布者模式不打印）12345#ifdef DEBUG#define NSLog(FORMAT, ...) fprintf(stderr,&quot;%s:%d\t%s\n&quot;,[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[
+          ...
 
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/10/iOS中常见的一些宏/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1167,53 +973,20 @@
       
         
           
-            <!--title：定义了博文的标题
-date：定义了创作此博文的时间
-tags：定义了博文的标签
-update：定义了最后修改的时间
-comments：定义能否评论此博文（true/false，默认为true）
-categories：定义了博文的种类-->
-<blockquote>
-<p><strong><span style="color: rgb(68, 175, 235); font-size: 20px;">Mac 用户肯定都受够了百度网盘在自己电脑上的糟糕体验，至少我是如此：安装官方的 App，经常下载时中断，有时甚至 Bug 般连续中断，无奈使用浏览器下载，速度却是令人挠头。花点时间来配置 aria2，结合 Chrome，一定让你舒心。</span></strong></p>
-</blockquote>
-<h1 id="aria2-是什么？"><a href="#aria2-是什么？" class="headerlink" title="aria2 是什么？"></a>aria2 是什么？</h1><p>aria2 是一款支持多种协议的轻量级命令行下载工具。有以下特性：</p>
-<ul>
-<li>多线程连线：aria2 会自动从多个线程下载文件，并充分利用你的带宽；</li>
-<li>轻量：运行时不会占用过多资源，根据官方介绍，内存占用通常在 4MB~9MB，使用 BitTorrent + 协议，下行速度 2.8MB/s 时 CPU 占用率约 6%；</li>
-<li>全功能 BitTorrent 客户端；</li>
-<li>支持 RPC 界面远程控制（下文重点介绍）。</li>
-</ul>
-<h1 id="开始吧"><a href="#开始吧" class="headerlink" title="开始吧"></a>开始吧</h1><h2 id="1-下载-aria2"><a href="#1-下载-aria2" class="headerlink" title="1. 下载 aria2"></a>1. 下载 aria2</h2><p>你可以在 <em><a href="https://aria2.github.io/" target="_blank" rel="external">aria2</a></em> 的 Download 下载对应的安装程序。下载之后直接双击打开安装即可。喜欢用 homebrew 的同学也可以使用命令<code>brew install aria2</code>来安装，已经安装好 aria2 的同学直接看第五步。</p>
-<p>（注：目前所有系统版本均已无需操作第二步）</p>
-<h2 id="2-如果是-El-Capitan-用户，你要做的"><a href="#2-如果是-El-Capitan-用户，你要做的" class="headerlink" title="2. 如果是 El Capitan 用户，你要做的"></a><del>2. 如果是 El Capitan 用户，你要做的</del></h2><p><del>由于 El Capitan 增加了系统完整性保护（System Integrity Protection），需要先暂时关闭才可进行下一步。操作如下：重启机器，开启时按住 <code>⌘ Cmd+R</code>，接着在菜单栏选择工具→终端，输入：</del></p>
-<p><del><code>csrutil disable</code></del></p>
-<p><del>接着进行第三步，切记：第三步结束之后要重新开启，同样的步骤，输入：</del></p>
-<p><del><code>csrutil enable</code></del></p>
-<h2 id="3-安装-Homebrew"><a href="#3-安装-Homebrew" class="headerlink" title="3. 安装 Homebrew"></a>3. 安装 Homebrew</h2><p>直接在终端里输入:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure>
-<p>接着等待进度条走完。等到一堆代码跳完之后根据提示按下回车键（Return）。</p>
-<h2 id="4-安装-aria2"><a href="#4-安装-aria2" class="headerlink" title="4. 安装 aria2"></a>4. 安装 aria2</h2><p>在终端输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install aria2</span><br></pre></td></tr></table></figure>
-<h2 id="5-设置配置文件"><a href="#5-设置配置文件" class="headerlink" title="5. 设置配置文件"></a>5. 设置配置文件</h2><p>aria2 提供两种方式使用，一种是直接命令行模式下载，不推荐使用这种方法，推荐使用另外一种 RPC 模式，这种方式 aria 启动之后只会安静的等待下载请求，下载完成后也只会安静的驻留后台不会自动退出。而使用RPC模式推荐做一个配置文件方便使用。我们把配置文件放在 ~/.aria2 下，依次输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br><span class="line">mkdir .aria2</span><br><span class="line">cd .aria2</span><br><span class="line">touch aria2.conf</span><br></pre></td></tr></table></figure>
-<p>接着打开 Finder，利用 <code>Shift+Cmd+G</code> 进入路径：<span style="color: red;">~/.aria2/aria2.conf</span>，用文本编辑器打开 <code>aria2.conf</code>，将 雪月秋水君 提供的以下配置直接拷贝进去：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">#用户名</span><br><span class="line">#rpc-user=user</span><br><span class="line">#密码</span><br><span class="line">#rpc-passwd=passwd</span><br><span class="line">#上面的认证方式不建议使用,建议使用下面的token方式</span><br><span class="line">#设置加密的密钥</span><br><span class="line">#rpc-secret=token</span><br><span class="line">#允许rpc</span><br><span class="line">enable-rpc=true</span><br><span class="line">#允许所有来源, web界面跨域权限需要</span><br><span class="line">rpc-allow-origin-all=true</span><br><span class="line">#允许外部访问，false的话只监听本地端口</span><br><span class="line">rpc-listen-all=true</span><br><span class="line">#RPC端口, 仅当默认端口被占用时修改</span><br><span class="line">#rpc-listen-port=6800</span><br><span class="line">#最大同时下载数(任务数), 路由建议值: 3</span><br><span class="line">max-concurrent-downloads=5</span><br><span class="line">#断点续传</span><br><span class="line">continue=true</span><br><span class="line">#同服务器连接数</span><br><span class="line">max-connection-per-server=5</span><br><span class="line">#最小文件分片大小, 下载线程数上限取决于能分出多少片, 对于小文件重要</span><br><span class="line">min-split-size=10M</span><br><span class="line">#单文件最大线程数, 路由建议值: 5</span><br><span class="line">split=10</span><br><span class="line">#下载速度限制</span><br><span class="line">max-overall-download-limit=0</span><br><span class="line">#单文件速度限制</span><br><span class="line">max-download-limit=0</span><br><span class="line">#上传速度限制</span><br><span class="line">max-overall-upload-limit=0</span><br><span class="line">#单文件速度限制</span><br><span class="line">max-upload-limit=0</span><br><span class="line">#断开速度过慢的连接</span><br><span class="line">#lowest-speed-limit=0</span><br><span class="line">#验证用，需要1.16.1之后的release版本</span><br><span class="line">#referer=*</span><br><span class="line">#文件保存路径, 默认为当前启动位置</span><br><span class="line">dir=/Users/xxx/Downloads</span><br><span class="line">#文件缓存, 使用内置的文件缓存, 如果你不相信Linux内核文件缓存和磁盘内置缓存时使用, 需要1.16及以上版本</span><br><span class="line">#disk-cache=0</span><br><span class="line">#另一种Linux文件缓存方式, 使用前确保您使用的内核支持此选项, 需要1.15及以上版本(?)</span><br><span class="line">#enable-mmap=true</span><br><span class="line">#文件预分配, 能有效降低文件碎片, 提高磁盘性能. 缺点是预分配时间较长</span><br><span class="line">#所需时间 none &lt; falloc ? trunc « prealloc, falloc和trunc需要文件系统和内核支持</span><br><span class="line">file-allocation=prealloc</span><br></pre></td></tr></table></figure>
-<p>默认下载路径的<span style="color: red;">「/Users/xxx/Downloads」</span>可以改为任何你想要的绝对路径。此处写为 Downloads 目录，xxx 请自行替换成你的 Mac 用户名，然后保存，退出编辑器。</p>
-<h2 id="6-启动-RPC-模式"><a href="#6-启动-RPC-模式" class="headerlink" title="6. 启动 RPC 模式"></a>6. 启动 RPC 模式</h2><p>在终端输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aria2c --conf-path=&quot;/Users/xxxxxx/.aria2/aria2.conf&quot; -D</span><br></pre></td></tr></table></figure>
-<p>比如我电脑路径是：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aria2c --conf-path=&quot;/Users/rxwang/.aria2/aria2.conf&quot; -D</span><br></pre></td></tr></table></figure>
-<p>然后 aria2 就启动了，但是如何搞定百度网盘？还需要在这里下载 Chrome 插件。</p>
-<p><br></p>
-<blockquote>
-<p><span style="font-size: 26px; color: red;">如何进行下载操作？</span></p>
-</blockquote>
-<p>随便打开一个百度网盘的链接，会发现网页上多出一个「导出下载」按钮，点击它弹出的「ARIA2 RPC」就自动添加到你的下载队列里了，然后利用 <em><a href="http://ziahamza.github.io/webui-aria2/" target="_blank" rel="external">Aria2 WebUI</a></em> 来管理你的下载任务，如下图所示，你可以利用图形界面进行许多操作：</p>
-<p><img src="http://7xsmal.com1.z0.glb.clouddn.com/aria2_webui.png" alt=""></p>
-<p>如果你想关掉后台的 aria2，可以到活动监视器中找到 aria2c 杀掉，也可以在终端输入 <code>kill aria2</code> 之后按 Tab 键，aria2 会自动变成进程号，回车即可杀掉它。</p>
-<p>~ End ~</p>
-
           
+
+Mac 用户肯定都受够了百度网盘在自己电脑上的糟糕体验，至少我是如此：安装官方的 App，经常下载时中断，有时甚至 Bug 般连续中断，无奈使用浏览器下载，速度却是令人挠头。花点时间来配置 aria2，结合 Chrome，一定让你舒心。
+
+aria2 是什么？aria2 是一款支持多种协议的轻量级命令行下载工具。有以下特性：
+
+多线程连线：aria2 会自动从多个线程下载文件，并充分利用你的带
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/07/aria2_conf/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1331,21 +1104,17 @@ categories：定义了博文的种类-->
       
         
           
-            <!--title：定义了博文的标题
-date：定义了创作此博文的时间
-tags：定义了博文的标签
-update：定义了最后修改的时间
-comments：定义能否评论此博文（true/false，默认为true）
-categories：定义了博文的种类-->
-<h2 id="1-安装language-babel插件"><a href="#1-安装language-babel插件" class="headerlink" title="1.安装language-babel插件"></a>1.安装language-babel插件</h2><h2 id="2-Atom设置"><a href="#2-Atom设置" class="headerlink" title="2.Atom设置"></a>2.Atom设置</h2><p>在Atom的language-babel的Setting中将Allow Local Override打勾<br><img src="http://7xsmal.com1.z0.glb.clouddn.com/rxbabel1.jpg" alt=""></p>
-<h2 id="3-添加-languagebabel文件"><a href="#3-添加-languagebabel文件" class="headerlink" title="3.添加.languagebabel文件"></a>3.添加.languagebabel文件</h2><p>在你的项目根目录建立一个.languagebabel文件，配置类似如下实例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"babelMapsPath"</span>:                      <span class="string">"relPath"</span>,</span><br><span class="line">  <span class="string">"babelSourcePath"</span>:                    <span class="string">"relPath"</span>,</span><br><span class="line">  <span class="string">"babelTranspilePath"</span>:                 <span class="string">"relPath"</span>,</span><br><span class="line">  <span class="string">"babelMapsAddUrl"</span>:                    <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"createMap"</span>:                          <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"createTargetDirectories"</span>:            <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"createTranspiledCode"</span>:               <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"disableWhenNoBabelrcFileInPath"</span>:     <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"projectRoot"</span>:                        <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"suppressSourcePathMessages"</span>:         <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"suppressTranspileOnSaveMessages"</span>:    <span class="literal">true</span>|<span class="literal">false</span>,</span><br><span class="line">  <span class="string">"transpileOnSave"</span>:                    <span class="literal">true</span>|<span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="4-添加-babelrc文件"><a href="#4-添加-babelrc文件" class="headerlink" title="4.添加.babelrc文件"></a>4.添加.babelrc文件</h2><p>在你的项目根目录建立一个.babelrc文件，配置类似如下实例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"presets"</span>: [<span class="string">"react"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="5-用atom编辑jsx"><a href="#5-用atom编辑jsx" class="headerlink" title="5.用atom编辑jsx"></a>5.用atom编辑jsx</h2><p>用atom编辑jsx文件时，要注意右下角下图所示这个地方，系统要以Babel ES6 JavaScript方式打开的才会使用到language-babel插件，如果不是，请点击更改。<br><img src="http://7xsmal.com1.z0.glb.clouddn.com/rxbabel2.jpg" alt=""></p>
-<h2 id="6-完成配置"><a href="#6-完成配置" class="headerlink" title="6.完成配置"></a>6.完成配置</h2><p>配置完毕后，你可以测试一下，写一个js或jsx文件，然后按保存，如果有问题的话，系统会在右上角弹出对话框，告诉你编译失败并且提示错误信息，光标也会定位到出错的位置。<br><img src="http://7xsmal.com1.z0.glb.clouddn.com/rxbabel_error.png" alt=""></p>
-<p>~ End ~</p>
-
           
+1.安装language-babel插件2.Atom设置在Atom的language-babel的Setting中将Allow Local Override打勾
+3.添加.languagebabel文件在你的项目根目录建立一个.languagebabel文件，配置类似如下实例：
+1234567891011121314&#123;  "babelMapsPath":                
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/05/atom_babel/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
